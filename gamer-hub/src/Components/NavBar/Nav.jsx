@@ -11,12 +11,12 @@ function Nav(){
             </section>
             <section className="nav-link-sect">
                 <ul className="link-sect">
-                    <li><NavLink className='link' activeClassName='active' to='/'>Home</NavLink></li>
-                    <li><NavLink className="link" activeClassName='active' to='/explore'>Explore</NavLink></li>
-                    <li><NavLink className="link" activeClassName='active' to='/theory'>Theory</NavLink></li>
-                    <li><NavLink className="link" activeClassName='active' to='/design'>Design</NavLink></li>
-                    <li><NavLink className="link" activeClassName='active' to='/art'>Art</NavLink></li>
-                    <li><NavLink className="link" activeClassName='active' id='about' to='/about'>About</NavLink></li>
+                    <li><NavLink className='link' activeclassname='active' to='/'>Home</NavLink></li>
+                    <li><NavLink className="link" activeclassname='active' to='/explore'>Explore</NavLink></li>
+                    <li><NavLink className="link" activeclassname='active' to='/theory'>Theory</NavLink></li>
+                    <li><NavLink className="link" activeclassname='active' to='/design'>Design</NavLink></li>
+                    <li><NavLink className="link" activeclassname='active' to='/art'>Art</NavLink></li>
+                    <li><NavLink className="link" activeclassname='active' id='about' to='/about'>About</NavLink></li>
                 </ul>
             </section>
         </nav>

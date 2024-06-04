@@ -1,12 +1,13 @@
 nav.nav-bar {
     background-color: #19284c;
     width: 100vw;
-    position: relative;
+    position: fixed;
     height: 4.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 2rem;
+    top: 0;
 }
 
 section.nav-head-sect {
@@ -31,6 +32,7 @@ ul.link-sect {
 
 ul.link-sect li {
     margin-left: 1rem;
+    width: 6rem;
 }
 
 .link {
@@ -62,7 +64,7 @@ ul.link-sect li {
 }
 
 .active {
-    background-color: #ff6e6157;
+    background-color: #ff6e613f;
 }
 
 /* Responsive Design */
