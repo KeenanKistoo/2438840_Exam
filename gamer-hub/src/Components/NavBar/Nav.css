@@ -1,0 +1,108 @@
+nav.nav-bar {
+    background-color: #19284c;
+    width: 100vw;
+    position: relative;
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+section.nav-head-sect {
+    padding: 0.4rem;
+    margin-left: 4.5rem;
+    margin-top: -0.5rem;
+}
+
+h1.main-head {
+    color: #FF6F61;
+    font-size: 1.8rem;
+}
+
+ul.link-sect {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-right: 5rem;
+    padding: 0;
+}
+
+ul.link-sect li {
+    margin-left: 1rem;
+}
+
+.link {
+    display: block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    transition: ease-in 0.2s;
+}
+
+.link:hover {
+    background-color: #ff6e6157;
+    cursor: pointer;
+}
+
+#about {
+    background-color: #FF6F61;
+    color: #19284c;
+    border: 1px solid #FF6F61;
+    font-weight: bold;
+    transition: ease-in 0.2s;
+}
+
+#about:hover {
+    background-color: #ff6e61bb;
+    color: white;
+}
+
+.active {
+    background-color: #ff6e6157;
+}
+
+/* Responsive Design */
+
+/* Tablet/iPad (Landscape) (768px - 1024px) */
+@media only screen and (max-width: 1024px) {
+    nav.nav-bar {
+        padding: 0 1.5rem;
+    }
+    
+    section.nav-head-sect {
+        margin-left: 2rem;
+    }
+
+    ul.link-sect {
+        width: 60%;
+        justify-content: flex-end; /* Move links to the right*/
+        margin-right: -20rem;
+    }
+
+}
+
+/* Tablet/iPad (Portrait) (481px - 767px) */
+@media only screen and (max-width: 830px) {
+    nav.nav-bar {
+        padding: 0 1rem;
+    }
+    
+    section.nav-head-sect {
+        text-align: center;
+        margin-top: 0;
+    }
+
+    h1.main-head {
+        font-size: 1.5rem; 
+        text-align: center;
+        margin-left: 18rem;
+    }
+    ul.link-sect{
+        display: none; /*I need to create a separate navigation for portrait tablets*/
+    }
+
+}
