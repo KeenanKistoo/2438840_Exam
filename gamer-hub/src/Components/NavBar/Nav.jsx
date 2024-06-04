@@ -11,12 +11,12 @@ function Nav(){
             </section>
             <section className="nav-link-sect">
                 <ul className="link-sect">
-                    <li><NavLink className='link' to='/'>Home</NavLink></li>
-                    <li><NavLink className="link" to='/explore'>Explore</NavLink></li>
-                    <li><NavLink className="link" to='/theory'>Theory</NavLink></li>
-                    <li><NavLink className="link" to='/design'>Design</NavLink></li>
-                    <li><NavLink className="link" to='/art'>Art</NavLink></li>
-                    <li><NavLink className="link" id='about' to='/about'>About</NavLink></li>
+                    <li><NavLink className='link' activeClassName='active' to='/'>Home</NavLink></li>
+                    <li><NavLink className="link" activeClassName='active' to='/explore'>Explore</NavLink></li>
+                    <li><NavLink className="link" activeClassName='active' to='/theory'>Theory</NavLink></li>
+                    <li><NavLink className="link" activeClassName='active' to='/design'>Design</NavLink></li>
+                    <li><NavLink className="link" activeClassName='active' to='/art'>Art</NavLink></li>
+                    <li><NavLink className="link" activeClassName='active' id='about' to='/about'>About</NavLink></li>
                 </ul>
             </section>
         </nav>
@@ -33,5 +33,6 @@ export default Nav;
     I struggled with the first submission because my page heading was not changing. I tried using useParams but I was not setting
     an id and if I were, it would just be the headings itself which again is counter productive. After searching online, I found 
     <NavLink>. If the 'to=link' is the same as the current link the user is on, the activeClassName is applied. In this case, it is
-    '.active'. 
+    '.active'. When ommited 'activeClassName' the correct btn is still highlighted however, I am keeping the styling tag there just 
+    to ensure it is there.
 */
