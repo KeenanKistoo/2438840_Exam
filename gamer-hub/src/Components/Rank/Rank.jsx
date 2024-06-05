@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import '../Rank/Rank.css';
 import Platforms from '../../Data/Platforms';
@@ -12,6 +12,7 @@ function Rank() {
 
   function handlePlat(platName) {
     setPlat(platName);
+    console.log(currentPlatform.id)
   }
 
   function handleLink(url){
@@ -29,9 +30,12 @@ function Rank() {
   return (
     <>
       <section className="select-sect">
-        <button onClick={() => handlePlat('STEAM')} className="select-btn">Steam</button>
-        <button onClick={() => handlePlat('XBOX')} className="select-btn">Xbox</button>
-        <button onClick={() => handlePlat('PS')} className="select-btn">PlayStation</button>
+        <button onClick={() => handlePlat('STEAM')}
+         className={currentPlatform && currentPlatform.id === 'STEAM' ? 'active-view' : 'select-btn'}>Steam</button>
+        <button onClick={() => handlePlat('XBOX')}
+        className={currentPlatform && currentPlatform.id === 'XBOX' ? 'active-view' : 'select-btn'}>Xbox</button>
+        <button onClick={() => handlePlat('PS')}
+         className={currentPlatform && currentPlatform.id === 'PS' ? 'active-view' : 'select-btn'}>PlayStation</button>
       </section>
       <section className="rank-sect">
         <section>

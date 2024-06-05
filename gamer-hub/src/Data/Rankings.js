@@ -1,13 +1,22 @@
-import FortniteImg from '../Images/fortnite.jpg';
-import CODImg from '../Images/cod.jpg';
-import eafcImg from '../Images/fifa.jpg';
-import fifaImg from '../Images/fifa23.jpg';
-import ApexImg from '../Images/apex.jpg';
-import ForzaImg from '../Images/forza.jpg';
-import GtaImg from '../Images/gta.jpg';
-import RSixImg from '../Images/r6.jpg';
-import MineImg from '../Images/minecraft.jpg';
-import RobloxImg from '../Images/roblox.jpg';
+import FortniteImg from '../Images/RankImgs/fortnite.jpg';
+import CODImg from '../Images/RankImgs/cod.jpg';
+import eafcImg from '../Images/RankImgs/fifa.jpg';
+import fifaImg from '../Images/RankImgs/fifa23.jpg';
+import ApexImg from '../Images/RankImgs/apex.jpg';
+import ForzaImg from '../Images/RankImgs/forza.jpg';
+import GtaImg from '../Images/RankImgs/gta.jpg';
+import RSixImg from '../Images/RankImgs/r6.jpg';
+import MineImg from '../Images/RankImgs/minecraft.jpg';
+import RobloxImg from '../Images/RankImgs/roblox.jpg';
+import UnturnedImg from '../Images/RankImgs/unturned.jpg';
+import RustImg from '../Images/RankImgs/rust.jpg';
+import TeamImg from '../Images/RankImgs/tf2.jpeg';
+import NarakaImg from '../Images/RankImgs/naraka.png';
+import DestinyImg from '../Images/RankImgs/destiny.png';
+import PubgImg from '../Images/RankImgs/pubg.png';
+import DotaImg from '../Images/RankImgs/dota.jpg';
+import CSImg from '../Images/RankImgs/cs.jpg';
+import OWImg from '../Images/RankImgs/ov2.png'
 
 const Rankings = [{
     id:0,
@@ -99,6 +108,188 @@ const Rankings = [{
     img: MineImg,
     url: 'https://www.xbox.com/en-za/games/store/minecraft/9mvxmvt8zkwc'
 },
+{
+    id:10,
+    gameName: "Counter-Strike 2",
+    rank:1,
+    price: "FREE",
+    platform: "STEAM",
+    img: CSImg,
+    url: 'https://store.steampowered.com/app/730/CounterStrike_2/'
+},
+{
+    id:11,
+    gameName: "DOTA 2",
+    rank:2,
+    price: "FREE",
+    platform: "STEAM",
+    img: DotaImg,
+    url: 'https://store.steampowered.com/app/570/Dota_2/'
+},
+{
+    id:12,
+    gameName: "PUBG: Battlegrounds",
+    rank:3,
+    price: "FREE",
+    platform: "STEAM",
+    img: PubgImg,
+    url: 'https://store.steampowered.com/app/578080/PUBG_BATTLEGROUNDS/'
+},
+{
+    id:13,
+    gameName: "Destiny 2",
+    rank:4,
+    price: "FREE",
+    platform: "STEAM",
+    img: DestinyImg,
+    url: 'https://store.steampowered.com/app/1085660/Destiny_2/'
+},
+{
+    id:14,
+    gameName: "Apex Legends",
+    rank:5,
+    price: "FREE",
+    platform: "STEAM",
+    img: ApexImg,
+    url: 'https://store.steampowered.com/app/1172470/Apex_Legends/'
+},
+{
+    id:15,
+    gameName: "Naraka: BLADEPOINT",
+    rank:6,
+    price: "FREE",
+    platform: "STEAM",
+    img: NarakaImg,
+    url: 'https://store.steampowered.com/app/1203220/NARAKA_BLADEPOINT/'
+},
+{
+    id:16,
+    gameName: "GTA V",
+    rank:7,
+    price: "FROM R300.22",
+    platform: "STEAM",
+    img: GtaImg,
+    url: 'https://store.steampowered.com/app/271590/Grand_Theft_Auto_V/'
+},
+{
+    id:17,
+    gameName: "Team Fortress 2",
+    rank:8,
+    price: "FREE",
+    platform: "STEAM",
+    img: TeamImg,
+    url: 'https://store.steampowered.com/app/440/Team_Fortress_2/'
+},
+{
+    id:18,
+    gameName: "RUST",
+    rank:9,
+    price: "FROM R329.00",
+    platform: "STEAM",
+    img: RustImg,
+    url: 'https://store.steampowered.com/app/252490/Rust/'
+},
+{
+    id:19,
+    gameName: "Unturned",
+    rank:10,
+    price: "FREE",
+    platform: "STEAM",
+    img: UnturnedImg,
+    url: 'https://store.steampowered.com/app/304930/Unturned/'
+},{
+    id:20,
+    gameName: "Fortnite",
+    rank:1,
+    price: "FREE",
+    platform: "PS",
+    img: FortniteImg,
+    url: 'https://www.playstation.com/en-za/games/fortnite/'
+},
+{
+    id:21,
+    gameName: "EA FC24",
+    rank:2,
+    price: "FROM R1099.00",
+    platform: "PS",
+    img: eafcImg,
+    url: 'https://www.playstation.com/en-za/games/ea-sports-fc/'
+},
+{
+    id:22,
+    gameName: "Call of Duty: MW II",
+    rank:3,
+    price: "FROM R689.50",
+    platform: "PS",
+    img: CODImg,
+    url: 'https://www.playstation.com/en-za/games/call-of-duty-modern-warfare-ii/'
+},
+
+{
+    id:23,
+    gameName: "ROBLOX",
+    rank:4,
+    price: "FREE",
+    platform: "PS",
+    img: RobloxImg,
+    url: 'https://www.playstation.com/en-za/games/roblox/'
+},
+{
+    id:24,
+    gameName: "Rainbox Six Seige",
+    rank:5,
+    price: "FROM R187.77",
+    platform: "PS",
+    img: RSixImg,
+    url: 'https://www.playstation.com/en-za/games/tom-clancys-rainbow-six-siege/'
+},
+{
+    id:25,
+    gameName: "GTA V",
+    rank:6,
+    price: "FROM R276.78",
+    platform: "PS",
+    img: GtaImg,
+    url: 'https://www.playstation.com/en-za/games/grand-theft-auto-v/'
+},
+{
+    id:26,
+    gameName: "Minecraft",
+    rank:7,
+    price: "FROM R179.50",
+    platform: "PS",
+    img: MineImg,
+    url: 'https://www.playstation.com/en-za/games/minecraft/'
+},
+{
+    id:27,
+    gameName: "Destiny 2",
+    rank:8,
+    price: "FREE",
+    platform: "PS",
+    img: DestinyImg,
+    url: 'https://www.playstation.com/en-za/games/destiny-2/'
+},
+{
+    id:5,
+    gameName: "Apex Legends",
+    rank:9,
+    price: "FREE",
+    platform: "PS",
+    img: ApexImg,
+    url: 'https://www.playstation.com/en-za/games/apex-legends/'
+},
+
+{
+    id:8,
+    gameName: "Overwatch 2",
+    rank:9,
+    price: "FREE",
+    platform: "PS",
+    img: OWImg,
+    url: 'https://www.playstation.com/en-za/games/overwatch/'
+},
+
 ]
 
 export default Rankings

@@ -118,12 +118,25 @@ section.rankings-sect::-webkit-scrollbar {
   
   section.rankings-sect::-webkit-scrollbar-thumb {
     background: #FF6F61;;
-    cursor: pointer;
+    cursor:ew-resize;
   }
   
   section.rankings-sect::-webkit-scrollbar-thumb:hover {
     background: #ff6e61c5; 
   }
+
+  button.active-view{
+    margin-left: auto;
+    margin-right: auto;
+    width: 8rem;
+    padding: 0.5rem;
+    background-color: #7c2965;
+    border: white 1px solid;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: -1rem;
+}
   
   /*    https://stackoverflow.com/questions/48960404/how-to-change-overflow-y-scrollbar-styles
         I used this to figure out how to style the overflow scroll bar
