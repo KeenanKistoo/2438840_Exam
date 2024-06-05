@@ -1,7 +1,7 @@
 import {React} from 'react';
 import Subhead from '../../Components/Subhead/Subhead';
 import Rank from '../../Components/Rank/Rank';
-import '../Home/Home.css' 
+import '../Home/Home.css'
 
 function Home(){
     
