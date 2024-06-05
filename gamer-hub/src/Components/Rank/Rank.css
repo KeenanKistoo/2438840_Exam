@@ -7,6 +7,7 @@ section.rank-sect{
     margin-left: auto;
     margin-right: auto;
     border-radius: 0.2rem;
+    overflow: hidden;
 }
 
 h3.subsect-head{
@@ -44,4 +45,24 @@ button.select-btn{
 button.select-btn:hover{
     cursor: pointer;
     background-color: #d175b783;
+}
+
+section.rankings-sect{
+    width: 100rem;
+    border: white solid 1px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    overflow: hidden;
+}
+
+img.rank-img{
+    width: auto;
+    max-width: 10rem;
+}
+
+p.plat-name{
+    color: black;
+    font-size: 2rem;
+    margin-top: 0rem;
 }

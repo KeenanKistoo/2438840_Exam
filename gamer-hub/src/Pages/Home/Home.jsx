@@ -14,9 +14,7 @@ function Home(){
        <Subhead
        heading="The Current Most Popular Video Games (04/06/2024)"
        />
-       <Rank
-       id={0}
-       compImg={SteamIcon}/>
+       <Rank/>
     </main>
   );
 };

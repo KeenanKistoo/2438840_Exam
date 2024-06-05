@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import '../Rank/Rank.css';
 import Platforms from '../../Data/Platforms';
+import Rankings from '../../Data/Rankings';
 
-function Rank(props) {
-  const { id, compImg } = props;
+function Rank() {
+
   //Controls the ID in this page to avoid using props. 
   const [plat, setPlat] = useState("STEAM");
 
@@ -13,7 +14,7 @@ function Rank(props) {
 
   useEffect(() => {
     //console.log('Platform: ' + plat);
-  }, [plat]); //Plat dependency to make sure it changes renders immediately. This was just a debug check.
+  }, [plat]); //Plat dependency to make sure  changes render immediately. This was just a debug check.
 
   //Check the array for the matching id
   const currentPlatform = Platforms.find(platform => platform.id === plat);
@@ -37,7 +38,13 @@ function Rank(props) {
           </h3>
         </section>
         <section className="rankings-sect">
-          {/* Your rankings content goes here */}
+          <section className='rank-child'>
+          <p className="rank-txt">{Rankings[0].rank}</p>
+          <img src={Rankings[0].img} alt="" className='rank-img'/>
+          <p className="plat-name">{Rankings[0].gameName}</p>
+          <p className="price-txt">{Rankings[0].price}</p>
+  
+          </section>
         </section>
       </section>
     </>
