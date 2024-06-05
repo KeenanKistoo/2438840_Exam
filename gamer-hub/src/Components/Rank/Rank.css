@@ -40,6 +40,7 @@ button.select-btn{
     color: white;
     font-weight: bold;
     font-size: 1.2rem;
+    margin-top: -1rem;
 }
 
 button.select-btn:hover{
@@ -47,22 +48,83 @@ button.select-btn:hover{
     background-color: #d175b783;
 }
 
-section.rankings-sect{
-    width: 100rem;
-    border: white solid 1px;
+section.rankings-sect {
+    width: 100%;
     height: auto;
     display: grid;
-    grid-template-columns: repeat(10, auto);
+    grid-template-columns: repeat(10, 1fr); 
     overflow: hidden;
-}
+    position: relative;
+    overflow-x: auto;
+  }
+  
 
 img.rank-img{
     width: auto;
     max-width: 10rem;
 }
 
-p.plat-name{
+button.plat-name{
+    display: block;
     color: black;
-    font-size: 2rem;
+    font-size: 1.2rem;    
     margin-top: 0rem;
+    color: white;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    border: none;
 }
+button.plat-name:hover{
+    cursor: pointer;
+    color: #131e38;
+    text-decoration: underline;
+}
+p.rank-txt{
+    color: white;
+    text-align: center;
+    margin-top: -0.4rem;
+}
+
+p.price-txt{
+    color: white;
+    font-style: italic;
+    text-align: center;
+    font-size: 0.8rem;
+}
+section.rank-child {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    background-color: #131e38;
+    padding: 0.3rem;
+    position: relative;
+    margin-bottom: 0.4rem;
+  }
+section.rank-child:hover{
+    margin-left: 0.5rem;
+    background-color: #d175b796;
+    padding: 0.3rem;
+}
+
+section.rankings-sect::-webkit-scrollbar {
+    width: 10px; 
+  }
+  
+  section.rankings-sect::-webkit-scrollbar-track {
+    background: #131e38;
+    margin-top: 1rem;
+  }
+  
+  section.rankings-sect::-webkit-scrollbar-thumb {
+    background: #FF6F61;;
+    cursor: pointer;
+  }
+  
+  section.rankings-sect::-webkit-scrollbar-thumb:hover {
+    background: #ff6e61c5; 
+  }
+  
+  /*    https://stackoverflow.com/questions/48960404/how-to-change-overflow-y-scrollbar-styles
+        I used this to figure out how to style the overflow scroll bar
+  */
