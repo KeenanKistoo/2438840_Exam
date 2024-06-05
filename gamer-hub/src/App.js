@@ -20,6 +20,7 @@ function App() {
           <Route path='/theory' element={<Theory/>}/>
           <Route path='/art' element={<Art/>}/>
           <Route path='/about' element={<About/>}/>
+          <Route path='*' element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
         

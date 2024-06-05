@@ -2,17 +2,17 @@ import {React, useEffect, useRef} from 'react';
 import {motion, useInView, useAnimation} from 'framer-motion';
 import '../Subhead/Subhead.css'
 function Subhead(props){
-    const {heading} = props;
-    const ref = useRef(null);
-    const isInView = useInView(ref, {once: true});
+    const {heading} = props; //This prop allows me to use this component throughout the webapp
+    const ref = useRef(null); //Framer motion requires a reference to use the useInView function
+    const isInView = useInView(ref, {once: true}); //Check when ref is in view and also how many times the animation should trigger
 
-    const subHeadControls = useAnimation();
+    const subHeadControls = useAnimation(); //framer-motion gives me access to a set of built-in animation controls
 
     useEffect(() => {
         if(isInView){
-            subHeadControls.start("visible");
+            subHeadControls.start("visible"); //Triggers the visible variant set below. 
         }
-    }, [isInView])
+    }, [subHeadControls, isInView])
   
   return (
         <motion.section 
@@ -31,3 +31,7 @@ function Subhead(props){
 };
 
 export default Subhead;
+
+/*  I learnt how to use the framer motion components from this https://www.youtube.com/watch?v=hjbxaYTMhy0 tutorial.
+    I felt that the website itself was too static and I wanted to add a bit more fluidity to it.
+    */
