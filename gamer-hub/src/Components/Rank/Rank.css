@@ -28,7 +28,8 @@ section.select-sect{
     grid-template-columns: repeat(3, 1fr);
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
+    margin-top: -1rem;
 }
 
 button.select-btn{
@@ -51,12 +52,13 @@ button.select-btn:hover{
 
 section.rankings-sect {
     width: 100%;
-    height: auto;
+    height: 57vh;
     display: grid;
     grid-template-columns: repeat(10, 1fr); 
     overflow: hidden;
     position: relative;
     overflow-x: auto;
+    padding-bottom: 1rem;
   }
   
 
@@ -100,26 +102,26 @@ section.rank-child {
     background-color: #131e38;
     padding: 0.3rem;
     position: relative;
-    margin-bottom: 0.4rem;
+    transition: 0.3s ease-in;
   }
 section.rank-child:hover{
     margin-left: 0.5rem;
     background-color: #d175b796;
     padding: 0.3rem;
+    box-shadow: 2px 2px 2px 2px #764067a3;
 }
 
 section.rankings-sect::-webkit-scrollbar {
     width: 10px; 
+   
   }
   
   section.rankings-sect::-webkit-scrollbar-track {
     background: #131e38;
-    margin-top: 1rem;
   }
   
   section.rankings-sect::-webkit-scrollbar-thumb {
     background: #FF6F61;;
-    cursor:ew-resize;
   }
   
   section.rankings-sect::-webkit-scrollbar-thumb:hover {
