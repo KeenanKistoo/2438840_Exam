@@ -1,0 +1,82 @@
+main.exp-main{
+    margin-top: -3rem;
+}
+
+p.ex-text{
+    color: white;
+    margin-left: 20rem;
+    margin-right: 20rem;
+    text-align: center;
+}
+
+.note{
+    color: #FF6F61;
+}
+
+.dropdown{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 15rem;
+    position: relative;
+    border-radius: 0.2rem;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.options{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.2s ease-out;
+}
+
+.hidden{
+    transition: 0.2s ease-in;
+    opacity: 0;
+    visibility: hidden;
+}
+.toggle{
+    background-color: #FF6F61;
+    color: #19284c;
+    border: 1px solid #FF6F61;
+    height: 2rem;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 1rem;
+}
+
+.toggle:hover{
+    cursor: pointer;
+    background-color: #ff6e61c8;
+}
+
+.option-btn{
+    color: white;
+    border: 1px solid white;
+    background-color: #ff6e613f;
+    height: 2rem;
+    font-weight: bold;
+    padding-left: 1rem;
+    text-align: left;
+}
+
+.option-btn:hover{
+    cursor: pointer;
+    background-color: #ff6e6174;
+}
+.active-choice{
+    background-color: #FF6F61;
+    color: #19284c;
+}
+
+.arrow{
+    float: inline-end;
+    font-weight: bold;
+    padding-right: 1rem;
+}
