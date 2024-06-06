@@ -45,7 +45,7 @@ function Rank() {
               src={currentPlatform ? currentPlatform.img : null}
               alt={currentPlatform ? currentPlatform.alt : 'UNKNOWN INPUT'}
               className="logo" />
-            </span> Platforms
+            </span> Platforms:
           </h3>
         </section>
         <section className="rankings-sect">
