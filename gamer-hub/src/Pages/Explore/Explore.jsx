@@ -87,7 +87,9 @@ import GameGenres from '../../Data/GameGenres'
             <h3 className="mech-head">{activeGenre ? 'Some Core Mechanics:': ''}</h3>
             <p className="ex-text">{activeGenre ? activeGenre.genMech : ''}</p>
           </section>
-          <GenreTab/>
+          <GenreTab 
+          activeGenre={activeGenre}
+          />
         </section>
       </main>
     )
