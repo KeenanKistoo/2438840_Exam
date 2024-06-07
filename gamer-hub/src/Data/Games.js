@@ -1,8 +1,96 @@
+import AgeOfEmpires from '../Images/GameImgs/ageof.png'
+import AmongUs from '../Images/GameImgs/among.jpg'
+import Apex from '../Images/RankImgs/apex.jpg'
+import Asphalt from '../Images/GameImgs/asphaly.png'
+import AssCreed from '../Images/GameImgs/assCreed.png'
+import Back4 from '../Images/GameImgs/back4blood.jpg'
+import Baldurs from '../Images/GameImgs/baldurs.png'
+import Broforce from '../Images/GameImgs/broforce.jpg'
+import busSim from '../Images/GameImgs/busSim.jpeg'
+import CallOfDuty from '../Images/RankImgs/cod.jpg'
+import Cities from '../Images/GameImgs/cities.pnhg'
+import Civil from '../Images/GameImgs/civ.jpg'
+import Cluedo from '../Images/GameImgs/cluedo.jpg'
+import Construct from '../Images/GameImgs/constructSim.jpeg'
+import DBZ from '../Images/GameImgs/dbz.jpg'
+import DeadAlive from '../Images/GameImgs/deadAlive.jpg'
+import Destiny from '../Images/GameImgs/desting.png'
+import Despe from '../Images/GameImgs/despe.jpg'
+import Detroit from '../Images/GameImgs/detroit.jpeg'
+import Diablo from '../Images/GameImgs/diablo.png'
+import DNF from '../Images/GameImgs/dnf.jpeg'
+import Doom from '../Images/GameImgs/doom.png'
+import EAFC from '../Images/RankImgs/fifa.jpg'
+import EldenRing from '../Images/GameImgs/eldenRing.png'
+import F1 from '../Images/GameImgs/f124.jpg'
+import FallOut from 'fallout4.jpg'
+import FishingSim from 'fishingSim.jpg'
+import FlightSim from 'flightSim.png'
+import FootbalMan from '../Images/GameImgs/footballManager.png'
+import ForzaH from '../Images/GameImgs/forzaHorizon.jpg'
+import ForzaM from '../Images/GameImgs/forzaMotor.jpeg'
+import Gears from '../Images/GameImgs/gears.jpg'
+import Ghost from '../Images/GameImgs/ghost.jpeg'
+import Goat from '../Images/GameImgs/goatSim.jpg'
+import GOW from '../Images/GameImgs/gow.jpg'
+import GrandTur from '../Images/GameImgs/grandTur.jpg'
+import Halo from '../Images/GameImgs/halo.png'
+import Hellblade from '../Images/GameImgs/hellblade.jpg'
+import Hollow from '../Images/GameImgs/hollow.jpg'
+import Hotwheels from '../Images/GameImgs/hotwheels.jpeg'
+import Humanity from '../Images/GameImgs/humanity.jpg'
+import Injustice from '../Images/GameImgs/injust2.jpg'
+import Inops from '../Images/GameImgs/inops.jpg'
+import InStars from '../Images/GameImgs/inStars.png'
+import TheBreach from 'intoTheBreach.jpg'
+import Katana from '../Images/GameImgs/katana.jpg'
+import LaMul from '../Images/GameImgs/lamul.jpg'
+import LastOfUs from '../Images/GameImgs/last2.jpg'
+import LawnMow from '../Images/GameImgs/lawnMowSim.png'
+import LOTR from '../Images/GameImgs/lotr.jpg'
+import Madden from '../Images/GameImgs/madded.jpeg'
+import MadMax from '../Images/GameImgs/madMax.png'
+import Marvel from '../Images/GameImgs/marvel.png'
+import Minecraft from '../Images/RankImgs/minecraft.jpg'
+import MK1 from '../Images/GameImgs/mk1.jpeg'
+import MLB from '../Images/GameImgs/mlb.png'
+import MotoGP from '../Images/GameImgs/motoGP.jpg'
+import NBA from '../Images/GameImgs/nba.jpg'
+import NFS from '../Images/GameImgs/nfsHeat.png'
+import NHL from '../Images/GameImgs/nhl.jpg'
+import PGA from '../Images/GameImgs/pga.jpeg'
+import PlanetFall from '../Images/GameImgs/planetfall.jpg'
+import Portal from '../Images/GameImgs/portal.jpg'
+import Quarry from '../Images/GameImgs/quarry.jpg'
+import Roblox from '../Images/RankImgs/roblox.jpg'
+import Rainbow from '../Images/RankImgs/r6.jpg'
+import Sims from '../Images/GameImgs/sims.png'
+import Skyrim from '../Images/GameImgs/skyrim.png'
+import Smash from '../Images/GameImgs/smash.jpg'
+import Splitgate from '../Images/GameImgs/splitgate.jpg'
+import StarCraft from '../Images/GameImgs/starCraft.jpg'
+import Stardew from '../Images/GameImgs/stardew.jpg'
+import StarWars from '../Images/GameImgs/starWars.jpeg'
+import StreetFight from '../Images/GameImgs/streetFight.jpg'
+import Terraria from '../Images/GameImgs/terraria.jpg'
+import Titanfall from '../Images/GameImgs/titanfall.jpg'
+import UFC from '../Images/GameImgs/ufc.jpeg'
+import Undernight from '../Images/GameImgs/undernight.jpg'
+import Uno from '../Images/GameImgs/uno.jpg'
+import Unravel from '../Images/GameImgs/unravel.jpg'
+import Valorant from '../Images/GameImgs/valo.jpg'
+import Witcher from '../Images/GameImgs/witcher.jpg'
+import WobblyLife from '../Images/GameImgs/wobblyLife.jpeg'
+import WRC from '../Images/GameImgs/wrc.jpg'
+import XCom from '../Images/GameImgs/xcom.jpg'
+import YuGi from '../Images/GameImgs/yugi.jpg'
+import Zelda from '../Images/GameImgs/zelda.jpg'
+
 const Games = [
     {
         id: 0,
         gameName: "Ghost of Tsushima",
-        gameImage: "",
+        gameImage: Ghost,
         gen1: "Adventure",
         gen2: "",
         gen3: "",
@@ -13,7 +101,7 @@ const Games = [
     {
         id: 1,
         gameName: "Fallout 4",
-        gameImage: "",
+        gameImage: FallOut,
         gen1: "RPG",
         gen2: "Adventure",
         gen3: "",
@@ -24,7 +112,7 @@ const Games = [
     {
         id: 2,
         gameName: "Baldur's Gate III",
-        gameImage: "",
+        gameImage: Baldurs,
         gen1: "RPG",
         gen2: "Adventure",
         gen3: "",
@@ -35,7 +123,7 @@ const Games = [
     {
         id: 3,
         gameName: "The Quarry",
-        gameImage: "",
+        gameImage: Quarry,
         gen1: "Adventure",
         gen2: "",
         gen3: "",
@@ -46,7 +134,7 @@ const Games = [
     {
         id: 4,
         gameName: "The Last of Us: Part II",
-        gameImage: "",
+        gameImage: LastOfUs,
         gen1: "Adventure",
         gen2: "",
         gen3: "",
@@ -57,7 +145,7 @@ const Games = [
     {
         id: 5,
         gameName: "Star Wars Jedi: Survivor",
-        gameImage: "",
+        gameImage: StarWars,
         gen1: "Adventure",
         gen2: "RPG",
         gen3: "",
@@ -68,7 +156,7 @@ const Games = [
     {
         id: 6,
         gameName: "God of War Ragnarök",
-        gameImage: "",
+        gameImage: GOW,
         gen1: "Adventure",
         gen2: "RPG",
         gen3: "",
@@ -79,7 +167,7 @@ const Games = [
     {
         id: 7,
         gameName: "Detroit: Become Human",
-        gameImage: "",
+        gameImage: Detroit,
         gen1: "Adventure",
         gen2: "",
         gen3: "",
@@ -90,7 +178,7 @@ const Games = [
     {
         id: 8,
         gameName: "Mad Max",
-        gameImage: "",
+        gameImage: MadMax,
         gen1: "Adventure",
         gen2: "RPG",
         gen3: "",
@@ -101,7 +189,7 @@ const Games = [
     {
         id: 9,
         gameName: "Hellblade: Senua's Sacrifice",
-        gameImage: "",
+        gameImage: Hellblade,
         gen1: "Adventure",
         gen2: "RPG",
         gen3: "",
@@ -112,7 +200,7 @@ const Games = [
     {
         id: 10,
         gameName: "Yu-Gi-Oh Master Duel",
-        gameImage: "",
+        gameImage: YuGi,
         gen1: "Card",
         gen2: "",
         gen3: "",
@@ -123,7 +211,7 @@ const Games = [
     {
         id: 11,
         gameName: "Uno",
-        gameImage: "",
+        gameImage: Uno,
         gen1: "Card",
         gen2: "",
         gen3: "",
@@ -134,7 +222,7 @@ const Games = [
     {
         id: 12,
         gameName: "The Lord of The Rings: Card Game",
-        gameImage: "",
+        gameImage: LOTR,
         gen1: "Card",
         gen2: "",
         gen3: "",
@@ -145,7 +233,7 @@ const Games = [
     {
         id: 13,
         gameName: "Cluedo",
-        gameImage: "",
+        gameImage: Cluedo,
         gen1: "Card",
         gen2: "",
         gen3: "",
@@ -156,7 +244,7 @@ const Games = [
     {
         id: 14,
         gameName: "DNF Duel",
-        gameImage: "",
+        gameImage: DNF,
         gen1: "Fighting",
         gen2: "",
         gen3: "",
@@ -167,7 +255,7 @@ const Games = [
     {
         id: 15,
         gameName: "Under Night In-Birth 2 Sys:Celes",
-        gameImage: "",
+        gameImage: Undernight,
         gen1: "Fighting",
         gen2: "",
         gen3: "",
@@ -178,7 +266,7 @@ const Games = [
     {
         id: 16,
         gameName: "EA Sports UFC 5",
-        gameImage: "",
+        gameImage: UFC,
         gen1: "Fighting",
         gen2: "Sports",
         gen3: "",
@@ -189,7 +277,7 @@ const Games = [
     {
         id: 17,
         gameName: "Marvel vs. Capcom Infinite",
-        gameImage: "",
+        gameImage: Marvel,
         gen1: "Fighting",
         gen2: "",
         gen3: "",
@@ -200,7 +288,7 @@ const Games = [
     {
         id: 18,
         gameName: "Dead or Alive 6",
-        gameImage: "",
+        gameImage: DeadAlive,
         gen1: "Fighting",
         gen2: "",
         gen3: "",
@@ -211,7 +299,7 @@ const Games = [
     {
         id: 19,
         gameName: "Injustice 2",
-        gameImage: "",
+        gameImage: Injustice,
         gen1: "Fighting",
         gen2: "",
         gen3: "",
@@ -222,7 +310,7 @@ const Games = [
     {
         id: 20,
         gameName: "Mortal Kombat 1",
-        gameImage: "",
+        gameImage: MK1,
         gen1: "Fighting",
         gen2: "",
         gen3: "",
@@ -233,7 +321,7 @@ const Games = [
     {
         id: 21,
         gameName: "Dragon Ball FighterZ",
-        gameImage: "",
+        gameImage: DBZ,
         gen1: "Fighting",
         gen2: "",
         gen3: "",
@@ -244,7 +332,7 @@ const Games = [
     {
         id: 22,
         gameName: "Super Smash Bros. Ultimate",
-        gameImage: "",
+        gameImage: Smash,
         gen1: "Fighting",
         gen2: "",
         gen3: "",
@@ -255,7 +343,7 @@ const Games = [
     {
         id: 23,
         gameName: "Street Fighter 6",
-        gameImage: "",
+        gameImage: StreetFight,
         gen1: "Fighting",
         gen2: "",
         gen3: "",
@@ -266,7 +354,7 @@ const Games = [
     {
         id: 24,
         gameName: "Splitgate",
-        gameImage: "",
+        gameImage: Splitgate,
         gen1: "FPS",
         gen2: "",
         gen3: "",
@@ -277,7 +365,7 @@ const Games = [
     {
         id: 25,
         gameName: "Valorant",
-        gameImage: "",
+        gameImage: Valorant,
         gen1: "FPS",
         gen2: "",
         gen3: "",
@@ -288,7 +376,7 @@ const Games = [
     {
         id: 26,
         gameName: "Back 4 Blood",
-        gameImage: "",
+        gameImage: Back4,
         gen1: "FPS",
         gen2: "Adventure",
         gen3: "",
@@ -299,7 +387,7 @@ const Games = [
     {
         id: 27,
         gameName: "Apex Legends",
-        gameImage: "",
+        gameImage: Apex,
         gen1: "FPS",
         gen2: "",
         gen3: "",
@@ -310,7 +398,7 @@ const Games = [
     {
         id: 28,
         gameName: "Titanfall 2",
-        gameImage: "",
+        gameImage: Titanfall,
         gen1: "FPS",
         gen2: "Adventure",
         gen3: "",
@@ -321,7 +409,7 @@ const Games = [
     {
         id: 29,
         gameName: "Rainbow Six Siege",
-        gameImage: "",
+        gameImage: Rainbow,
         gen1: "FPS",
         gen2: "",
         gen3: "",
@@ -332,7 +420,7 @@ const Games = [
     {
         id: 30,
         gameName: "Call of Duty: Warzone",
-        gameImage: "",
+        gameImage: CallOfDuty,
         gen1: "FPS",
         gen2: "",
         gen3: "",
@@ -343,7 +431,7 @@ const Games = [
     {
         id: 31,
         gameName: "Halo",
-        gameImage: "",
+        gameImage: Halo,
         gen1: "FPS",
         gen2: "",
         gen3: "",
@@ -354,7 +442,7 @@ const Games = [
     {
         id: 32,
         gameName: "Doom Eternal",
-        gameImage: "",
+        gameImage: Doom,
         gen1: "FPS",
         gen2: "",
         gen3: "",
@@ -365,7 +453,7 @@ const Games = [
     {
         id: 33,
         gameName: "Destiny 2",
-        gameImage: "",
+        gameImage: Destiny,
         gen1: "FPS",
         gen2: "",
         gen3: "",
@@ -376,7 +464,7 @@ const Games = [
     {
         id: 34,
         gameName: "La Mulana",
-        gameImage: "",
+        gameImage: LaMul,
         gen1: "Platformer",
         gen2: "Adventure",
         gen3: "",
@@ -387,7 +475,7 @@ const Games = [
     {
         id: 35,
         gameName: "Portal",
-        gameImage: "",
+        gameImage: Portal,
         gen1: "Platformer",
         gen2: "Adventure",
         gen3: "",
@@ -398,7 +486,7 @@ const Games = [
     {
         id: 36,
         gameName: "Hollow Knight",
-        gameImage: "",
+        gameImage: Hollow,
         gen1: "Platformer",
         gen2: "Adventure",
         gen3: "",
@@ -409,7 +497,7 @@ const Games = [
     {
         id: 37,
         gameName: "Katana ZERO",
-        gameImage: "",
+        gameImage: Katana,
         gen1: "Platformer",
         gen2: "Adventure",
         gen3: "",
@@ -420,7 +508,7 @@ const Games = [
     {
         id: 38,
         gameName: "Broforce",
-        gameImage: "",
+        gameImage: Broforce,
         gen1: "Platformer",
         gen2: "Adventure",
         gen3: "",
@@ -431,7 +519,7 @@ const Games = [
     {
         id: 39,
         gameName: "Humanity",
-        gameImage: "",
+        gameImage: Humanity,
         gen1: "Platformer",
         gen2: "Adventure",
         gen3: "",
@@ -442,7 +530,7 @@ const Games = [
     {
         id: 40,
         gameName: "Terraria",
-        gameImage: "",
+        gameImage: Terraria,
         gen1: "Platformer",
         gen2: "Adventure",
         gen3: "RPG",
@@ -453,7 +541,7 @@ const Games = [
     {
         id: 41,
         gameName: "Inops",
-        gameImage: "",
+        gameImage: Inops,
         gen1: "Platformer",
         gen2: "Adventure",
         gen3: "",
@@ -464,7 +552,7 @@ const Games = [
     {
         id: 42,
         gameName: "Unravel",
-        gameImage: "",
+        gameImage: Unravel,
         gen1: "Platformer",
         gen2: "Adventure",
         gen3: "",
@@ -475,7 +563,7 @@ const Games = [
     {
         id: 43,
         gameName: "Hot Wheels Unleashed 2",
-        gameImage: "",
+        gameImage: Hotwheels,
         gen1: "Racing",
         gen2: "",
         gen3: "",
@@ -486,7 +574,7 @@ const Games = [
     {
         id: 44,
         gameName: "F1 24",
-        gameImage: "",
+        gameImage: F1,
         gen1: "Racing",
         gen2: "Sports",
         gen3: "",
@@ -497,7 +585,7 @@ const Games = [
     {
         id: 45,
         gameName: "Forza Horizon 5",
-        gameImage: "",
+        gameImage: ForzaH,
         gen1: "Racing",
         gen2: "",
         gen3: "",
@@ -508,7 +596,7 @@ const Games = [
     {
         id: 46,
         gameName: "WRC 10",
-        gameImage: "",
+        gameImage: WRC,
         gen1: "Racing",
         gen2: "",
         gen3: "",
@@ -519,7 +607,7 @@ const Games = [
     {
         id: 47,
         gameName: "Asphalt",
-        gameImage: "",
+        gameImage: Asphalt,
         gen1: "Racing",
         gen2: "",
         gen3: "",
@@ -530,7 +618,7 @@ const Games = [
     {
         id: 48,
         gameName: "Forza Motorsport",
-        gameImage: "",
+        gameImage: ForzaM,
         gen1: "Racing",
         gen2: "",
         gen3: "",
@@ -541,7 +629,7 @@ const Games = [
     {
         id: 49,
         gameName: "Need For Speed: Heat",
-        gameImage: "",
+        gameImage: NFS,
         gen1: "Racing",
         gen2: "",
         gen3: "",
@@ -552,7 +640,7 @@ const Games = [
     {
         id: 50,
         gameName: "Grand Turismo",
-        gameImage: "",
+        gameImage: GrandTur,
         gen1: "Racing",
         gen2: "",
         gen3: "",
@@ -563,7 +651,7 @@ const Games = [
     {
         id: 51,
         gameName: "Motor GP 23",
-        gameImage: "",
+        gameImage: MotoGP,
         gen1: "Racing",
         gen2: "",
         gen3: "",
@@ -574,7 +662,7 @@ const Games = [
     {
         id: 53,
         gameName: "In Stars and Time",
-        gameImage: "",
+        gameImage: InStars,
         gen1: "RPG",
         gen2: "Adventure",
         gen3: "",
@@ -585,7 +673,7 @@ const Games = [
     {
         id: 54,
         gameName: "Diablo 3",
-        gameImage: "",
+        gameImage: Diablo,
         gen1: "RPG",
         gen2: "Adventure",
         gen3: "",
@@ -596,7 +684,7 @@ const Games = [
     {
         id: 55,
         gameName: "Stardew Valley",
-        gameImage: "",
+        gameImage: Stardew,
         gen1: "RPG",
         gen2: "Adventure",
         gen3: "",
@@ -607,7 +695,7 @@ const Games = [
     {
         id: 56,
         gameName: "Assassin's Creed Odyssey",
-        gameImage: "",
+        gameImage: AssCreed,
         gen1: "RPG",
         gen2: "Adventure",
         gen3: "",
@@ -618,7 +706,7 @@ const Games = [
     {
         id: 57,
         gameName: "Elden Ring",
-        gameImage: "",
+        gameImage: EldenRing,
         gen1: "RPG",
         gen2: "Adventure",
         gen3: "",
@@ -629,7 +717,7 @@ const Games = [
     {
         id: 58,
         gameName: "Elder Scrolls 5: Skyrim",
-        gameImage: "",
+        gameImage: Skyrim,
         gen1: "RPG",
         gen2: "Adventure",
         gen3: "",
@@ -640,7 +728,7 @@ const Games = [
     {
         id: 59,
         gameName: "Legend of Zelda: Breath of the Wild",
-        gameImage: "",
+        gameImage: Zelda,
         gen1: "RPG",
         gen2: "Adventure",
         gen3: "",
@@ -651,7 +739,7 @@ const Games = [
     {
         id: 62,
         gameName: "The Witcher 3: Wild Hunt",
-        gameImage: "",
+        gameImage: Witcher,
         gen1: "RPG",
         gen2: "",
         gen3: "",
@@ -662,7 +750,7 @@ const Games = [
     {
         id: 63,
         gameName: "Roblox",
-        gameImage: "",
+        gameImage: Roblox,
         gen1: "Sim",
         gen2: "RPG",
         gen3: "",
@@ -673,7 +761,7 @@ const Games = [
     {
         id: 64,
         gameName: "The Sims",
-        gameImage: "",
+        gameImage: Sims,
         gen1: "Sim",
         gen2: "RPG",
         gen3: "",
@@ -684,7 +772,7 @@ const Games = [
     {
         id: 65,
         gameName: "Minecraft",
-        gameImage: "",
+        gameImage: Minecraft,
         gen1: "Sim",
         gen2: "RPG",
         gen3: "Adventure",
@@ -695,7 +783,7 @@ const Games = [
     {
         id: 66,
         gameName: "Bus Simulator",
-        gameImage: "",
+        gameImage: busSim,
         gen1: "Sim",
         gen2: "",
         gen3: "",
@@ -706,7 +794,7 @@ const Games = [
     {
         id: 67,
         gameName: "Flight Simulator",
-        gameImage: "",
+        gameImage: FlightSim,
         gen1: "Sim",
         gen2: "",
         gen3: "",
@@ -717,7 +805,7 @@ const Games = [
     {
         id: 68,
         gameName: "Football Manager 2024",
-        gameImage: "",
+        gameImage: FootbalMan,
         gen1: "Sim",
         gen2: "Sports",
         gen3: "",
@@ -728,7 +816,7 @@ const Games = [
     {
         id: 69,
         gameName: "Goat Simulator",
-        gameImage: "",
+        gameImage: Goat,
         gen1: "Sim",
         gen2: "",
         gen3: "",
@@ -739,7 +827,7 @@ const Games = [
     {
         id: 70,
         gameName: "Fishing Planet",
-        gameImage: "",
+        gameImage: FishingSim,
         gen1: "Sim",
         gen2: "",
         gen3: "",
@@ -750,7 +838,7 @@ const Games = [
     {
         id: 71,
         gameName: "Wobbly Life",
-        gameImage: "",
+        gameImage: WobblyLife,
         gen1: "Sim",
         gen2: "",
         gen3: "",
@@ -761,7 +849,7 @@ const Games = [
     {
         id: 72,
         gameName: "Construction Simulator",
-        gameImage: "",
+        gameImage: Construct,
         gen1: "Sim",
         gen2: "",
         gen3: "",
@@ -772,7 +860,7 @@ const Games = [
     {
         id: 73,
         gameName: "Lawn Mowing Simulator",
-        gameImage: "",
+        gameImage: LawnMow,
         gen1: "Sim",
         gen2: "",
         gen3: "",
@@ -783,7 +871,7 @@ const Games = [
     {
         id: 74,
         gameName: "NBA 2K24",
-        gameImage: "",
+        gameImage: NBA,
         gen1: "Sports",
         gen2: "",
         gen3: "",
@@ -794,7 +882,7 @@ const Games = [
     {
         id: 75,
         gameName: "Madden 24",
-        gameImage: "",
+        gameImage: Madden,
         gen1: "Sports",
         gen2: "",
         gen3: "",
@@ -805,7 +893,7 @@ const Games = [
     {
         id: 76,
         gameName: "MLB The Show 23",
-        gameImage: "",
+        gameImage: MLB,
         gen1: "Sports",
         gen2: "",
         gen3: "",
@@ -816,7 +904,7 @@ const Games = [
     {
         id: 77,
         gameName: "EA FC 24",
-        gameImage: "",
+        gameImage: EAFC,
         gen1: "Sports",
         gen2: "",
         gen3: "",
@@ -827,7 +915,7 @@ const Games = [
     {
         id: 79,
         gameName: "NHL 24",
-        gameImage: "",
+        gameImage: NHL,
         gen1: "Sports",
         gen2: "",
         gen3: "",
@@ -838,7 +926,7 @@ const Games = [
     {
         id: 80,
         gameName: "PGA Tour 24",
-        gameImage: "",
+        gameImage: PGA,
         gen1: "Sports",
         gen2: "",
         gen3: "",
@@ -849,7 +937,7 @@ const Games = [
     {
         id: 84,
         gameName: "Among Us",
-        gameImage: "",
+        gameImage: AmongUs,
         gen1: "Strategy",
         gen2: "",
         gen3: "",
@@ -860,7 +948,7 @@ const Games = [
     {
         id: 85,
         gameName: "Age of Empires IV",
-        gameImage: "",
+        gameImage: AgeOfEmpires,
         gen1: "Strategy",
         gen2: "",
         gen3: "",
@@ -870,7 +958,7 @@ const Games = [
     },{
         id: 86,
         gameName: "Age of Wonders: Planetfall",
-        gameImage: "",
+        gameImage: PlanetFall,
         gen1: "Strategy",
         gen2: "",
         gen3: "",
@@ -881,7 +969,7 @@ const Games = [
     {
         id: 87,
         gameName: "Gears Tactics",
-        gameImage: "",
+        gameImage: Gears,
         gen1: "Strategy",
         gen2: "",
         gen3: "",
@@ -892,7 +980,7 @@ const Games = [
     {
         id: 88,
         gameName: "Cities: Skylines",
-        gameImage: "",
+        gameImage: Cities,
         gen1: "Strategy",
         gen2: "",
         gen3: "",
@@ -903,7 +991,7 @@ const Games = [
     {
         id: 89,
         gameName: "Desperados 3",
-        gameImage: "",
+        gameImage: Despe,
         gen1: "Strategy",
         gen2: "",
         gen3: "",
@@ -914,7 +1002,7 @@ const Games = [
     {
         id: 90,
         gameName: "Civilization 6",
-        gameImage: "",
+        gameImage: Civil,
         gen1: "Strategy",
         gen2: "",
         gen3: "",
@@ -925,7 +1013,7 @@ const Games = [
     {
         id: 91,
         gameName: "XCOM 2",
-        gameImage: "",
+        gameImage: XCom,
         gen1: "Strategy",
         gen2: "",
         gen3: "",
@@ -936,7 +1024,7 @@ const Games = [
     {
         id: 92,
         gameName: "StarCraft 2",
-        gameImage: "",
+        gameImage: StarCraft,
         gen1: "Strategy",
         gen2: "",
         gen3: "",
@@ -947,7 +1035,7 @@ const Games = [
     {
         id: 93,
         gameName: "Into the Breach",
-        gameImage: "",
+        gameImage: TheBreach,
         gen1: "Strategy",
         gen2: "",
         gen3: "",
