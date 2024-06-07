@@ -2,6 +2,7 @@ import React, {useState, useEffect, useRef} from 'react'
 import '../Explore/Explore.css'
 import Subhead from '../../Components/Subhead/Subhead'
 import GenreTab from '../../Components/GenreTab/GenreTab'
+import GameGenres from '../../Data/GameGenres'
 
 
  function Explore()  {
@@ -16,6 +17,9 @@ import GenreTab from '../../Components/GenreTab/GenreTab'
 
   //The option the user clicks***
   const [selectedOption, setSelectedOption] = useState(null);
+
+  //The active genre heading
+  const activeGenre = GameGenres.find(genre => genre.btnTitle === selectedOption);
 
   //Function switches the dropdown visibile or invisible
   function handleToggleDrop(){
@@ -74,6 +78,14 @@ import GenreTab from '../../Components/GenreTab/GenreTab'
                   onClick={() => handleSelectedOption(genre)} key={index}>{genre}</button>
               )})}
             </section>
+          </section>
+          <section className="game-sect">
+            <Subhead 
+            heading={activeGenre ? activeGenre.genreName + ' Games' : ''}
+            />
+            <p className="ex-text">{activeGenre ? activeGenre.overView : ''}</p>
+            <h3 className="mech-head">{activeGenre ? 'Some Core Mechanics:': ''}</h3>
+            <p className="ex-text">{activeGenre ? activeGenre.genMech : ''}</p>
           </section>
           <GenreTab/>
         </section>

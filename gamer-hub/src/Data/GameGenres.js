@@ -31,7 +31,7 @@ const GameGenres = [
         genreName: 'First Person Shooter',
         btnTitle: 'FPS',
         eSports: true,
-        overView: "Shooter is a sub-genre of action games in which gameplay is primarily based around shooting mechanics. The shooting aspect is commonly attributed to projectile-based weapons, devices and actions performed by the player's avatar.",
+        overView: "First Person Shooter's are a sub-genre of action games in which gameplay is primarily based around shooting mechanics. The shooting aspect is commonly attributed to projectile-based weapons, devices and actions performed by the player's avatar.",
         genMech:'Shooting, health and resource management, movement mechanics, team coordination (some cases), level/weapon progression, rank progression, navigation, character development, objective based, decision-making.',
         redditLink:'https://www.reddit.com/r/CallOfDuty/'
     },

@@ -45,10 +45,11 @@ p.ex-text{
     background-color: #FF6F61;
     color: #19284c;
     border: 1px solid #FF6F61;
-    height: 2rem;
+    height: 3rem;
     font-weight: bold;
     text-align: left;
     padding-left: 1rem;
+    font-size: 1.2rem;
 }
 
 .toggle:hover{
@@ -59,7 +60,7 @@ p.ex-text{
 .option-btn{
     color: white;
     border: 1px solid white;
-    background-color: #ff6e613f;
+    background-color: #7a312b;
     height: 2rem;
     font-weight: bold;
     padding-left: 1rem;
@@ -68,7 +69,7 @@ p.ex-text{
 
 .option-btn:hover{
     cursor: pointer;
-    background-color: #ff6e6174;
+    background-color: #b5483e;
 }
 .active-choice{
     background-color: #FF6F61;
@@ -79,4 +80,15 @@ p.ex-text{
     float: inline-end;
     font-weight: bold;
     padding-right: 1rem;
+}
+
+section.game-sect{
+    margin-top: -8rem;
+}
+
+h3.mech-head{
+    padding-top: 0rem;
+    font-size: 2.4rem;
+    color: #57e3d3;
+    text-align: center;
 }
