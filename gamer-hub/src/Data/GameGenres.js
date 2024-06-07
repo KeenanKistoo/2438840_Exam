@@ -28,6 +28,15 @@ const GameGenres = [
     },
     {
         id:3,
+        genreName: 'First Person Shooter',
+        btnTitle: 'FPS',
+        eSports: true,
+        overView: "Shooter is a sub-genre of action games in which gameplay is primarily based around shooting mechanics. The shooting aspect is commonly attributed to projectile-based weapons, devices and actions performed by the player's avatar.",
+        genMech:'Shooting, health and resource management, movement mechanics, team coordination (some cases), level/weapon progression, rank progression, navigation, character development, objective based, decision-making.',
+        redditLink:'https://www.reddit.com/r/CallOfDuty/'
+    },
+    {
+        id:4,
         genreName: 'Platformer',
         btnTitle: 'Platformer',
         eSports: false,
@@ -36,7 +45,7 @@ const GameGenres = [
         redditLink:'https://www.reddit.com/r/platformer/'
     },
     {
-        id:4,
+        id:5,
         genreName: 'Racing and Flying',
         btnTitle: 'Racing',
         eSports: true,
@@ -45,22 +54,13 @@ const GameGenres = [
         redditLink:'https://www.reddit.com/r/racinggames/'
     },
     {
-        id:5,
+        id:6,
         genreName: 'Role-Playing',
         btnTitle: 'RPG',
         eSports: false,
         overView: 'Role-playing games, or RPGs, are essentially but not exclusively defined by games which the player takes the role of a character (or a team of characters) in a certain fictional setting, what explains the applied term. In video games, the role-playing is performed meeting certain characteristics typical to the original tabletop RPGs. Basically, those characteristics consist of options regarding the character development and build, narrative and story progression, exploration, and decision-making.',
         genMech:'Health and resource management, attack and defence mechanics, navigation and environmental awareness, resource collection, world-building, problem/puzzle solving, decision making… honestly, anything can be a mechanic in a role-playing game.',
         redditLink:'https://www.reddit.com/r/rpg_gamers/'
-    },
-    {
-        id:6,
-        genreName: 'First Person Shooter',
-        btnTitle: 'FPS',
-        eSports: true,
-        overView: "Shooter is a sub-genre of action games in which gameplay is primarily based around shooting mechanics. The shooting aspect is commonly attributed to projectile-based weapons, devices and actions performed by the player's avatar.",
-        genMech:'Shooting, health and resource management, movement mechanics, team coordination (some cases), level/weapon progression, rank progression, navigation, character development, objective based, decision-making.',
-        redditLink:'https://www.reddit.com/r/CallOfDuty/'
     },
     {
         id:7,

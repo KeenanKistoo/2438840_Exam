@@ -1,10 +1,11 @@
 import React, {useState, useEffect, useRef} from 'react'
 import '../Explore/Explore.css'
 import Subhead from '../../Components/Subhead/Subhead'
+import GenreTab from '../../Components/GenreTab/GenreTab'
 
 
  function Explore()  {
-  let genres = ['Adventure', 'Card','Fighting','Platformer','Racing','RPG','FPS','Sim','Sports','Strategy']
+  let genres = ['Adventure', 'Card','Fighting','FPS','Platformer','Racing','RPG','Sim','Sports','Strategy']
 
   const [toggleDrop, setToggleDrop] = useState(false);
 
@@ -65,6 +66,7 @@ import Subhead from '../../Components/Subhead/Subhead'
               )})}
             </section>
           </section>
+          <GenreTab/>
         </section>
       </main>
     )

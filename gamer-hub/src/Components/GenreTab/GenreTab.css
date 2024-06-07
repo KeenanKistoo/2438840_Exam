@@ -1,0 +1,13 @@
+section.genre-tab{
+    width: 70vw;
+    border: 1px solid #d175b7;
+    height: auto;
+    padding-bottom: 0.4rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    border-radius: 0.2rem;
+    overflow: hidden;
+}
