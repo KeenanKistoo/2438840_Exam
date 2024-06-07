@@ -507,7 +507,7 @@ const Games = [
     },
     {
         id: 46,
-        gameName: "FRC 10",
+        gameName: "WRC 10",
         gameImage: "",
         gen1: "Racing",
         gen2: "",
@@ -562,7 +562,7 @@ const Games = [
     },
     {
         id: 51,
-        gameName: "Motor GP",
+        gameName: "Motor GP 23",
         gameImage: "",
         gen1: "Racing",
         gen2: "",
@@ -572,16 +572,6 @@ const Games = [
         ps: true
     },
     {
-        id: 52,
-        gameName: "Asphalt: Airborne",
-        gameImage: "",
-        gen1: "Racing",
-        gen2: "",
-        gen3: "",
-        steam: false,
-        xbox: false,
-        ps: false
-    },{
         id: 53,
         gameName: "In Stars and Time",
         gameImage: "",
@@ -659,33 +649,11 @@ const Games = [
         ps: false
     },
     {
-        id: 60,
-        gameName: "Baldur's Gate 3",
-        gameImage: "",
-        gen1: "RPG",
-        gen2: "Adventure",
-        gen3: "",
-        steam: true,
-        xbox: true,
-        ps: true
-    },
-    {
-        id: 61,
-        gameName: "Mass Effect 2",
-        gameImage: "",
-        gen1: "RPG",
-        gen2: "Adventure",
-        gen3: "",
-        steam: true,
-        xbox: true,
-        ps: true
-    },
-    {
         id: 62,
         gameName: "The Witcher 3: Wild Hunt",
         gameImage: "",
         gen1: "RPG",
-        gen2: "Adventure",
+        gen2: "",
         gen3: "",
         steam: true,
         xbox: true,
@@ -748,7 +716,7 @@ const Games = [
     },
     {
         id: 68,
-        gameName: "Football Manager",
+        gameName: "Football Manager 2024",
         gameImage: "",
         gen1: "Sim",
         gen2: "Sports",
@@ -847,18 +815,7 @@ const Games = [
     },
     {
         id: 77,
-        gameName: "FIFA 24",
-        gameImage: "",
-        gen1: "Sports",
-        gen2: "",
-        gen3: "",
-        steam: true,
-        xbox: true,
-        ps: true
-    },
-    {
-        id: 78,
-        gameName: "Football Manager 24",
+        gameName: "EA FC 24",
         gameImage: "",
         gen1: "Sports",
         gen2: "",
@@ -887,39 +844,6 @@ const Games = [
         gen3: "",
         steam: false,
         xbox: true,
-        ps: true
-    },
-    {
-        id: 81,
-        gameName: "Super Mega Baseball 4",
-        gameImage: "",
-        gen1: "Sports",
-        gen2: "",
-        gen3: "",
-        steam: true,
-        xbox: true,
-        ps: true
-    },
-    {
-        id: 82,
-        gameName: "Golf with Friends",
-        gameImage: "",
-        gen1: "Sports",
-        gen2: "",
-        gen3: "",
-        steam: true,
-        xbox: true,
-        ps: true
-    },
-    {
-        id: 83,
-        gameName: "Gran Turismo 7",
-        gameImage: "",
-        gen1: "Sports",
-        gen2: "",
-        gen3: "",
-        steam: false,
-        xbox: false,
         ps: true
     },
     {
