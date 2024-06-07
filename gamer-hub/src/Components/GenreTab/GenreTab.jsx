@@ -1,5 +1,6 @@
 import React from 'react'
 import '../GenreTab/GenreTab.css'
+import Games from '../../Data/Games'
 
 function GenreTab() {
 

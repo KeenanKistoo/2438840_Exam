@@ -5,25 +5,33 @@ import GenreTab from '../../Components/GenreTab/GenreTab'
 
 
  function Explore()  {
+  //List of genres for btns
   let genres = ['Adventure', 'Card','Fighting','FPS','Platformer','Racing','RPG','Sim','Sports','Strategy']
 
+  //Set dropdown active/inactive
   const [toggleDrop, setToggleDrop] = useState(false);
 
+  //Reference the dropdwon
   const dropdownRef = useRef(null); 
 
+  //The option the user clicks***
   const [selectedOption, setSelectedOption] = useState(null);
 
+  //Function switches the dropdown visibile or invisible
   function handleToggleDrop(){
     setToggleDrop(!toggleDrop);
   }
 
+  //Function switches the dropdown off and sets the selectedOption state to what the user selects
   function handleSelectedOption(genre){
     setSelectedOption(genre);
     handleToggleDrop();
   }
 
+  //Detects if the user clicks away from the dropdown
   useEffect(()=>{
 
+    //function turns the dropdwon off if the user clicks away
     function handleOffClick(e){
       if(dropdownRef.current){
         if(!dropdownRef.current.contains(e.target)){
@@ -32,6 +40,7 @@ import GenreTab from '../../Components/GenreTab/GenreTab'
       }
     }
 
+    //Turns the event listener off to avoid unneccessary clicks or overlapping buttons.
     document.addEventListener('click', handleOffClick)
 
     return () => {
