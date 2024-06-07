@@ -22,9 +22,10 @@ h4.game-head{
 }
 section.game-sect-cards{
     width: 100%;
-    height: 48vh;
+    height: 57vh;
     display: grid;
-    grid-template-columns: auto; 
+    grid-template-rows: 100%;
+    grid-template-columns: repeat(50, 1fr); 
     overflow: hidden;
     position: relative;
     overflow-x: auto;
@@ -35,7 +36,7 @@ section.game-card{
     margin-right: 0.5rem;
     background-color: #131e38;
     width: 15rem;
-    height: 100%;
+    height: 25rem;
 }
 
 h5.game-card-head{
@@ -73,4 +74,10 @@ img.plat-logo{
 
 img.not{
     opacity: 0.2;
+}
+
+.hide{
+    opacity: 0;
+    visibility: hidden;
+    margin-left: 100rem;
 }

@@ -21,6 +21,9 @@ import GameGenres from '../../Data/GameGenres'
   //The active genre heading
   const activeGenre = GameGenres.find(genre => genre.btnTitle === selectedOption);
 
+  //Set the table for popular games active or inactive 
+  const [activeTable, setActiveTable] = useState(false);
+
   //Function switches the dropdown visibile or invisible
   function handleToggleDrop(){
     setToggleDrop(!toggleDrop);
@@ -29,6 +32,7 @@ import GameGenres from '../../Data/GameGenres'
   //Function switches the dropdown off and sets the selectedOption state to what the user selects
   function handleSelectedOption(genre){
     setSelectedOption(genre);
+    setActiveTable(true);
     handleToggleDrop();
   }
 
@@ -89,6 +93,7 @@ import GameGenres from '../../Data/GameGenres'
           </section>
           <GenreTab 
           activeGenre={activeGenre}
+          activeTable={activeTable}
           />
         </section>
       </main>

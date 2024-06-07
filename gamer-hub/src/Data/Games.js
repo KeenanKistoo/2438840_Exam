@@ -437,7 +437,7 @@ const Games = [
         gen3: "",
         steam: true,
         xbox: true,
-        ps: true
+        ps: false
     },
     {
         id: 32,
@@ -1044,3 +1044,5 @@ const Games = [
         ps: false
     }
 ]
+
+export default Games;
