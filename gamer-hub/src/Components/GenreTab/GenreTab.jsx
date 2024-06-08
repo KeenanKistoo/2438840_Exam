@@ -1,7 +1,6 @@
 import React from 'react'
 import '../GenreTab/GenreTab.css'
 import Games from '../../Data/Games'
-import RanImg from '../../Images/GameImgs/ageof.png'
 import SteamLogo from '../../Images/steam_icon_white.png'
 import XboxLogo from '../../Images/xbox_corr.png'
 import PSLogo from '../../Images/ps_corr.png'

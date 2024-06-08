@@ -3,6 +3,7 @@ import '../Explore/Explore.css'
 import Subhead from '../../Components/Subhead/Subhead'
 import GenreTab from '../../Components/GenreTab/GenreTab'
 import GameGenres from '../../Data/GameGenres'
+import YouTube from '../../Components/YouTube/YouTube'
 
 
  function Explore()  {
@@ -93,6 +94,7 @@ import GameGenres from '../../Data/GameGenres'
           activeGenre={activeGenre}
           activeTable={activeTable}
           />
+          <YouTube/>
         </section>
       </main>
     )

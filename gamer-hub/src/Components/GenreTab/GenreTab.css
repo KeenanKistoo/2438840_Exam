@@ -8,6 +8,7 @@ section.genre-tab{
     margin-left: auto;
     margin-right: auto;
     margin-top: 2rem;
+    margin-bottom: 2rem;
     border-radius: 0.2rem;
     overflow: hidden;
 }
