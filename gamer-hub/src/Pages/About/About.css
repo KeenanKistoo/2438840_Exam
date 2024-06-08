@@ -5,6 +5,7 @@ main.about-main{
     background-repeat: repeat;
     background-size: cover;
     margin-top: -2rem;
+    margin-bottom: 12rem;
 }
 
 h3.sub-sub{
@@ -48,6 +49,7 @@ body, html {
     padding-bottom: 2rem;
     margin-left: 46.5%;
     margin-right: auto;
+    margin-bottom: 2rem;
 }
 
 .dl-img{

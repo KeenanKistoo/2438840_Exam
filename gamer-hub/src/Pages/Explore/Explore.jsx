@@ -95,7 +95,8 @@ import YouTube from '../../Components/YouTube/YouTube'
           activeTable={activeTable}
           />
           <YouTube
-          activeGenre={activeGenre}/>
+          activeGenre={activeGenre}
+          activeTable={activeTable}/>
         </section>
       </main>
     )

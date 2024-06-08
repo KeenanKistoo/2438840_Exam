@@ -4,10 +4,10 @@ import YoutubeVideos from '../../Data/YoutubeVideos';
 
  function YouTube (props){
 
-    const {activeGenre} = props;
+    const {activeGenre, activeTable} = props;
 
     return (
-      <section className='you-sect-cards'>
+      <section className=  {`you-sect-cards ${activeTable ? '' : 'hide'}`}>
         <section className="you-card">
             <h4 className='you-head'>Upcoming Releases:</h4>
             {YoutubeVideos.map((vid, index) => (

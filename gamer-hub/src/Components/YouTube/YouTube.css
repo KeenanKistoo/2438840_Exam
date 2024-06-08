@@ -11,6 +11,7 @@ section.you-sect-cards{
     margin-bottom: 3rem;
     border-radius: 0.2rem;
     overflow: hidden;
+
 }
 
 h4.you-head{
@@ -32,4 +33,9 @@ iframe{
 
 #initial {
     margin-left: 1.3rem;
+}
+
+.hide{
+    opacity: 0;
+    visibility: hidden;
 }

@@ -40,3 +40,15 @@ section.social-btns{
     justify-items: center;
     align-items: center;
 }
+
+section.res-sect{
+    background-color: #131f3b;
+    height: 2rem;
+    padding-bottom: 0.6rem;
+}
+
+p.res-txt{
+    color: #FF6F61;
+    text-align: center;
+    padding-top: 0.65rem;
+}
