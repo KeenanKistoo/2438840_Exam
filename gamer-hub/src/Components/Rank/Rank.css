@@ -63,8 +63,11 @@ section.rankings-sect {
   
 
 img.rank-img{
+    display: block;
     width: auto;
-    max-width: 10rem;
+    max-width: 12rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 button.plat-name{
@@ -102,6 +105,9 @@ section.rank-child {
     background-color: #131e38;
     padding: 0.3rem;
     position: relative;
+    width: 13rem;
+    display: grid;
+    grid-template-rows: 6% 73% 10% 10%;
     transition: 0.3s ease-in;
   }
 section.rank-child:hover{
