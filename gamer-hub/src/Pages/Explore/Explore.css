@@ -10,7 +10,10 @@ p.ex-text{
 }
 
 .note{
-    color: #FF6F61;
+    color: #57e3d3;
+    margin-left: 20rem;
+    margin-right: 20rem;
+    text-align: center;
 }
 
 .dropdown{

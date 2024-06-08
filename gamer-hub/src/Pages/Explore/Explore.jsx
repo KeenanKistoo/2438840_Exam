@@ -63,9 +63,7 @@ import GameGenres from '../../Data/GameGenres'
           />
           <p className="ex-text">
             The objective of this website is to help gamers explore different video games, whether they are within their comfort zone or not. Select a genre you would like to explore and stay up to date with upcoming releases and the most popular games in each genre. </p>
-
-          <p className='ex-text'><span className='note'>PLEASE NOTE:</span> Some genres do not have major eSports competitions, which is why those sections may be excluded for certain genres.</p>
-          <p className='ex-text'>
+          <p className='note'>
             Enjoy, and happy gaming!
           </p>
           </section>

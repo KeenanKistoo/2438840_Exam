@@ -16,7 +16,8 @@ section.genre-tab{
 
 h4.game-head{
     color: white;
-    margin-top: -0.2rem;
+    text-align: center;
+    margin-top: -0.01rem;
     font-size: 1.4rem;
 
 }
@@ -81,3 +82,19 @@ img.not{
     visibility: hidden;
     margin-left: 100rem;
 }
+section.game-sect-cards::-webkit-scrollbar {
+    width: 10px; 
+   
+  }
+  
+  section.game-sect-cards::-webkit-scrollbar-track {
+    background: #131e38;
+  }
+  
+  section.game-sect-cards::-webkit-scrollbar-thumb {
+    background: #FF6F61;;
+  }
+  
+  section.game-sect-cards::-webkit-scrollbar-thumb:hover {
+    background: #ff6e61c5; 
+  }

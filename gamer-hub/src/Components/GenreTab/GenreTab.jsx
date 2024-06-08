@@ -12,7 +12,7 @@ function GenreTab(props) {
       <section className={`genre-tab ${activeTable ? '' : 'hide'}`}> {/*Hide the box until a genre is selected */}
         <section className="head-sect">
             <h4 className="game-head">
-                {activeGenre ? 'Popular ' + activeGenre.btnTitle + ' Games' : 'ERROR, Please Reselect Genre'}
+                {activeGenre ? 'Popular ' + activeGenre.btnTitle + ' Games:' : 'ERROR, Please Reselect Genre'}
             </h4>
         </section>
         <section className={`game-sect-cards`}>
