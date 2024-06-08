@@ -7,6 +7,7 @@ import Explore from './Pages/Explore/Explore';
 import Theory from './Pages/Theory/Theory';
 import Art from './Pages/Art/Art';
 import About from './Pages/About/About';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path='/about' element={<About/>}/>
           <Route path='*' element={<Navigate to="/" replace />} />
         </Routes>
+        <Footer/>
       </BrowserRouter>
         
     </>

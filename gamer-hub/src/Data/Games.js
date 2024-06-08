@@ -188,7 +188,7 @@ const Games = [
     },
     {
         id: 9,
-        gameName: "Hellblade: Senua's Sacrifice",
+        gameName: "Hellblade",
         gameImage: Hellblade,
         gen1: "Adventure",
         gen2: "RPG",
@@ -254,7 +254,7 @@ const Games = [
     },
     {
         id: 15,
-        gameName: "Under Night In-Birth 2 Sys:Celes",
+        gameName: "Under Night",
         gameImage: Undernight,
         gen1: "Fighting",
         gen2: "",
@@ -276,7 +276,7 @@ const Games = [
     },
     {
         id: 17,
-        gameName: "Marvel vs. Capcom Infinite",
+        gameName: "Marvel vs. Capcom",
         gameImage: Marvel,
         gen1: "Fighting",
         gen2: "",
@@ -331,7 +331,7 @@ const Games = [
     },
     {
         id: 22,
-        gameName: "Super Smash Bros. Ultimate",
+        gameName: "Super Smash Bros.",
         gameImage: Smash,
         gen1: "Fighting",
         gen2: "",
@@ -727,7 +727,7 @@ const Games = [
     },
     {
         id: 59,
-        gameName: "Legend of Zelda: Breath of the Wild",
+        gameName: "Legend of Zelda",
         gameImage: Zelda,
         gen1: "RPG",
         gen2: "Adventure",
@@ -957,7 +957,7 @@ const Games = [
         ps: false
     },{
         id: 86,
-        gameName: "Age of Wonders: Planetfall",
+        gameName: "Age of Wonders",
         gameImage: PlanetFall,
         gen1: "Strategy",
         gen2: "",

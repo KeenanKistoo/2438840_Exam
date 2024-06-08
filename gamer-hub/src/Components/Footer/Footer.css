@@ -1,0 +1,42 @@
+footer.footer{
+    width: 99vw;
+    height: 15vh;
+    background-color: #FF6F61;
+    margin-top: 1.5rem;
+}
+
+p.foot-txt{
+    color: #131f3b;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+img.social-img{
+    width: 2.5rem;
+}
+img.social-img:hover{
+    opacity: 0.8;
+}
+
+button.social-btn{
+    background-color: transparent;
+    border: none;
+    width: 2rem;
+}
+
+button.social-btn:hover{
+    cursor: pointer;
+}
+
+section.social-btns{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 10vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    justify-items: center;
+    align-items: center;
+}
