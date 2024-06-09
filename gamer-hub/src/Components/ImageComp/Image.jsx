@@ -1,8 +1,9 @@
 import React from 'react'
+import '../ImageComp/Image.css'
 
  function ImageComp(props){
     return (
-      <img className="gen-txt" src={props.img}/>
+      <img className="gen-img" src={props.image} alt='Wireframe Images' key={props.key}/>
     )
   }
 

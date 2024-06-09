@@ -1,0 +1,9 @@
+img.gen-img{
+    display: block;
+    width: auto;
+    max-width: 40rem;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 0.5rem;
+}

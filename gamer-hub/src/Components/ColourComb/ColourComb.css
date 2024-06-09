@@ -1,0 +1,14 @@
+div.colour-show{
+    width: 2rem;
+    height: 2rem;
+    background-color: #FF6F61;
+    display: block;
+    margin:auto ;
+}
+div.colour-show-w{
+    width: 2rem;
+    height: 2rem;
+    background-color: white;
+    display: block;
+    margin:auto ;
+}

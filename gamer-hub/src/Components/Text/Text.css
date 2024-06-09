@@ -1,0 +1,9 @@
+p.gen-txt{
+    display: flex;
+    color: white;
+    margin-left: 20rem;
+    margin-right: 20rem;
+    text-align: justify;
+    padding-top: 1rem;
+    padding-bottom: 0.2rem;
+}
