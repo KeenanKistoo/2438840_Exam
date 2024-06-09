@@ -11,9 +11,16 @@ section.genre-tab{
     margin-bottom: 2rem;
     border-radius: 0.2rem;
     overflow: hidden;
+    transition: ease-in 5s linear;
 }
 
+.hide{
+    opacity: 0;
+    visibility: hidden;
+    margin-left: 100rem;
+    transition: ease-in 1s linear;
 
+}
 
 h4.game-head{
     color: white;
@@ -82,11 +89,7 @@ img.not{
     opacity: 0.2;
 }
 
-.hide{
-    opacity: 0;
-    visibility: hidden;
-    margin-left: 100rem;
-}
+
 section.game-sect-cards::-webkit-scrollbar {
     width: 10px; 
    

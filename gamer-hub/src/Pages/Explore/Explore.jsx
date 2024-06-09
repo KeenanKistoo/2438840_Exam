@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useRef} from 'react'
-import '../Explore/Explore.css'
+  import '../Explore/Explore.css'
 import Subhead from '../../Components/Subhead/Subhead'
 import GenreTab from '../../Components/GenreTab/GenreTab'
 import GameGenres from '../../Data/GameGenres'
@@ -82,7 +82,8 @@ import YouTube from '../../Components/YouTube/YouTube'
               )})}
             </section>
           </section>
-          <section className="game-sect">
+          <section 
+          className="game-sect">
             <Subhead 
             heading={activeGenre ? activeGenre.genreName + ' Games' : ''}
             />

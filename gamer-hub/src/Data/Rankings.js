@@ -283,7 +283,7 @@ const Rankings = [{
 {
     id:8,
     gameName: "Overwatch 2",
-    rank:9,
+    rank:10,
     price: "FREE",
     platform: "PS",
     img: OWImg,
