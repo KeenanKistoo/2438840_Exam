@@ -55,3 +55,39 @@ body, html {
 .dl-img{
     width: 1rem;
 }
+
+/* Responsive Design */
+
+@media (min-width: 0px) and (max-width: 840px){
+    p.disc{
+        margin-left: 4rem;
+        margin-right: 4rem;
+        color: white;
+        text-align: justify;
+    }
+}
+@media (min-width: 841px) and (max-width: 1000px){
+    p.disc{
+        margin-left: 10rem;
+        margin-right: 10rem;
+        color: white;
+        text-align: justify;
+    }
+}
+
+@media only screen and (min-width: 1001px){
+    p.disc{
+        margin-left: 14rem;
+        margin-right: 14rem;
+        color: white;
+        text-align: justify;
+    }
+}
+@media only screen and (min-width: 1200px){
+    p.disc{
+        margin-left: 20rem;
+        margin-right: 20rem;
+        color: white;
+        text-align: justify;
+    }
+}
