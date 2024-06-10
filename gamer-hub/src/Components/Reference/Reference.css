@@ -1,0 +1,19 @@
+button.ref-btn{
+    background-color: transparent;
+    color: white;
+    border: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    text-align: justify;
+    align-items: start;
+    justify-content: start;
+    font-size: 0.8rem;
+}
+
+button.ref-btn:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    color: aqua;
+}

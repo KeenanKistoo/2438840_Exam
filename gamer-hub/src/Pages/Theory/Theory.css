@@ -1,0 +1,27 @@
+main.the-main{
+    margin-top: 6rem;
+}
+
+section.fil-btns{
+    width: 40vw;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+button.the-btn{
+    width: 8rem;
+    padding: 0.5rem;
+    background-color: #d175b7;
+    border: white 1px solid;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+button.the-btn:hover{
+    cursor: pointer;
+    background-color: #d175b783;
+}
