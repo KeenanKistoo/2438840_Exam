@@ -7,3 +7,30 @@ img.gen-img{
     margin-right: auto;
     padding-bottom: 0.5rem;
 }
+
+/* Responsive Design */
+
+@media (min-width: 0px) and (max-width: 840px){
+    img.gen-img{
+        max-width: 22rem;
+        
+    }
+}
+@media (min-width: 841px) and (max-width: 1000px){
+    img.gen-img{
+        max-width: 30rem;
+        
+    }
+}
+
+@media only screen and (min-width: 1001px){
+    img.gen-img{
+        max-width: 35rem;
+       
+    }
+}
+@media only screen and (min-width: 1200px){
+    img.gen-img{
+        max-width: 40rem;
+    }
+}

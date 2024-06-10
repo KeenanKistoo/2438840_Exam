@@ -3,3 +3,29 @@ h3.gen-head{
     color: #57e3d3;
     text-align: center;
 }
+/* Responsive Design */
+
+@media (min-width: 0px) and (max-width: 840px){
+    h3.gen-head{
+        font-size: 1.4rem;
+        
+    }
+}
+@media (min-width: 841px) and (max-width: 1000px){
+    h3.gen-head{
+        font-size: 1.6rem;
+        
+    }
+}
+
+@media only screen and (min-width: 1001px){
+    h3.gen-head{
+        font-size: 2.1rem;
+       
+    }
+}
+@media only screen and (min-width: 1200px){
+    h3.gen-head{
+        font-size: 2.5rem;
+    }
+}
