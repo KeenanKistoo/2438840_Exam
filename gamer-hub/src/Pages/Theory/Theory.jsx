@@ -21,10 +21,10 @@ import Reference from '../../Components/Reference/Reference'
     return (
       <main className="the-main">
         <section className="fil-btns">
-          <button onClick={() => handleTheory(Essay)} className="the-btn">Essay</button>
-          <button onClick={() => handleTheory(Blog1)} className="the-btn">Week 3 - Blogpost</button>
-          <button onClick={() => handleTheory(Blog2)} className="the-btn">Week 4 - Blogpost</button>
-          <button onClick={() => handleTheory(Blog3)} className="the-btn">Week 12 - Blogpost</button>
+          <button onClick={() => handleTheory(Essay)} className={displayTheory === Essay ? 'the-active-btn' : 'the-btn'}>Essay</button>
+          <button onClick={() => handleTheory(Blog1)} className={displayTheory === Blog1 ? 'the-active-btn' : 'the-btn'}>Week 3 - Blogpost</button>
+          <button onClick={() => handleTheory(Blog2)} className={displayTheory === Blog2 ? 'the-active-btn' : 'the-btn'}>Week 4 - Blogpost</button>
+          <button onClick={() => handleTheory(Blog3)} className={displayTheory === Blog3 ? 'the-active-btn' : 'the-btn'}>Week 12 - Blogpost</button>
         </section>
         <section>
           {
@@ -38,7 +38,7 @@ import Reference from '../../Components/Reference/Reference'
               }else if(output.type === 'link'){
                 return <Link url={output.info} key={index}/>
               }else{
-                return <Reference info={output.info} url={output.url} key={index}/>
+                return <Reference info={output.info} url={output} key={index}/>
               }
             })
           }
