@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+.arcade-screen {
+    position: relative;
+}
+
+.arcade {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* https://www.shecodes.io/athena/7710-how-to-position-a-fixed-element-in-the-top-right-corner#:~:text=in%203.93%20seconds-,To%20position%20a%20fixed%20element%20in%20the%20top%20right%20corner,properties%20to%20adjust%20its%20position.&text=In%20this%20example%2C%20we've,of%20%22fixed%2Delement%22. */
+.lives-sect {
+    position: absolute;
+    top: 46%; 
+    left: 45%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 5rem; 
+}
+
+.heart {
+    width: 1.5rem;
+}
+
+.score-sect{
+    position: absolute;
+    top: 44%; 
+    left: 56%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 5rem; 
+    color: white;
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+.prog-sect{
+    position: absolute;
+    top: 53%; 
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 10rem; 
+    background-color: white;
+    border-radius: 0.5rem;
+}
+
+.prog-bar{
+    background-color: #FF6F61;
+    color: #FF6F61;
+    height: 100%;
+    border-radius: 0.5rem;
+}
+
+.icon-sect{
+    position: absolute;
+    top: 55%; 
+    left: 51.5%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 5rem; 
+}
+
+.icons{
+    position: relative  ;
+    color: white;
+    font-size: 1.5rem;
+    padding-left: 0.6rem;
+    padding-right: 0.5rem;
+    border-radius: 100%;
+    left: 5%;
+    border: 1px solid white;
+
+}
+
+.icon-pause{
+    color: white;
+    font-size: 1.4rem;
+}
+
+.timer-sect{
+    position: absolute;
+    top: 48%; 
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 1.1rem;
+}

@@ -1,13 +1,14 @@
 import React from 'react'
-
+import '../Art/Art.css'
+import Starter from '../../Components/Starter/Starter';
+import Game from '../../Components/Game/Game';
 
  function Art()  {
 
     return (
-      <div>
-        <h2>Art</h2>
-      </div>
-      
+      <main className='art-main'>
+        <Game/>
+      </main>
     )
   }
 

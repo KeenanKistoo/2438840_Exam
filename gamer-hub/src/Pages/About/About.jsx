@@ -42,7 +42,7 @@ import DL from '../../Images/download.png';
         <p className="disc-centre">
           Email: kistook19@gmail.com
         </p>
-        <a className='cv-link' href={cvPDF} download>Download CV <span ><img className='dl-img' src={DL} alt='Download Image Symbol' /></span></a>
+        <a className='cv-link' href={cvPDF} download>Download CV <span ><img className='dl-img' src={DL} alt='Download Symbol' /></span></a>
       </main>
     )
   }
