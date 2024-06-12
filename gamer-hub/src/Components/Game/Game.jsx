@@ -4,17 +4,15 @@ import FullHeart from '../../Images/ArtSect/heart_full.png';
 import EmptyHeart from '../../Images/ArtSect/heart_empty.png';
 import '../Game/Game.css';
 import AudioData from '../../Data/Audio';
-import YellowButton from '../../Images/ArtSect/yellow_btn.png'
+
 
 function Game() {
-    // Current state of the game
-    const [startGame, setStartGame] = useState(false);
 
     // Current Live Count
     const [lives, setLives] = useState(3);
 
     //Timer Counte
-    const [timer, SetTimer] = useState(9);
+    const [timer, setTimer] = useState(9);
 
     //Score Count
     const [score, SetScore] = useState(0)
@@ -25,17 +23,61 @@ function Game() {
     //Prog Bar Width
     const [newWidth, setNewWidth] = useState(100)
 
-    //current song
-    const [currentSong, setCurrentSong] = useState(AudioData[0].audio);
+    //Array of songs
+    const [songs, setSongs] = useState(AudioData)
 
-    let audioTest = new Audio(currentSong);
+    //Question Tracker
+    const [tracker, setTracker] = useState(0);
 
 
-    function startTimer(){
-        SetTimer(timer - 1);
-        setNewWidth(timer/9 * 100)
-        
+    function handleTimer(){
+        if(timer > 0){
+        setTimer(timer - 1);
     }
+    }
+
+    //let timerInt = setInterval(handleTimer, 1000);
+
+    //Random Selection of 5 Songs
+    function genSongs(){
+        let availNumbers = [0,1,2,3,4,5,6,7]
+        let tracker = 5;
+        let copyArray = [...songs];
+
+        while(tracker > 0){
+            let ranNum = Math.floor(Math.random () * availNumbers.length)
+            availNumbers.splice(ranNum, 1);
+            tracker--;
+        }     
+
+        for(let i=0; i < copyArray.length; i++){
+            if(i === availNumbers[0] || i === availNumbers[1] || i === availNumbers[2]){
+                copyArray[i].selected = false
+            }else{
+                copyArray[i].selected = true;
+            }
+        }
+        setSongs(copyArray);
+        //console.log(songs);
+}
+
+    function playSongs(){
+        let copyArray = [...songs]
+        let TestAudio = new Audio(copyArray[tracker].audio)
+
+        TestAudio.play();
+    }
+    //***NOTE:comment out this hook
+    useEffect(() => {
+        genSongs();
+        //playSongs();
+
+        if(timer > 0){
+            setNewWidth(timer * 10);
+        }else {
+            console.log("Interval Cleared")
+        }
+    },[timer]); // This line is for testing purposes. The function needs to be called on button click. NOTE:comment out this hook
 
     
     return (
@@ -59,7 +101,7 @@ function Game() {
                 <p className={play ? "icon-pause" : "icons"}>{play ? '▐▐ ' : '▶ '}</p>
             </section>
             <section className="answer-sect">
-                <button className="ans-btn">Answer 1</button>
+                <button className="ans-btn">Colours 1</button>
                 <button className="ans-btn">Answer 2</button>
                 <button className="ans-btn">Answer 3</button>
                 <button className="ans-btn">Answer 4</button>
@@ -69,3 +111,50 @@ function Game() {
 }
 
 export default Game;
+
+
+/*  STEPS TO CREATE GAME:
+
+    1) Randomise song list to get 7 songs.
+        - Save song list is state[]
+    
+    2) Randomise button answers
+        - Assign 1 correct answer + 3 incorrect answers
+    
+    3) Countdown for song
+        - Give user 3 second warning
+
+    4) Play Song
+        - Every song is 9 seconds
+
+    5) Answer Time
+        - IF user answers while song is playing, stop song and complete answer check
+        - IF user does not answer, give 3 seconds after 
+    
+    6) Check answer
+        - Correct: Turn Button Green + Add Points to scoreboard
+        - Incorrect: Remove a life
+
+    7)  Life Check
+        -If loses a life, is it last life? 
+            Yes > End Game
+            No > Continue Game
+    
+    8) Song Count Check
+        - Last song?
+            Yes > End Game Check
+            No > COntinue as usual
+*/
+
+/*  Notes:
+    Random Number Genrator:
+    https://www.w3schools.com/js/js_random.asp
+    I used an RNG to select songs. I generate a number between 0,1.
+    In C#, the RNG is based on parameters. For example, ranNum = Random.Range(min (inclusive), max(exclusive)).
+    However, in JS, it is the number being multiplied. In my code 'ranNum = Math.floor(Math.random() * 2)', the
+    2 represents the exclusive number and the range if values. 
+
+    It was actually shocking how much time I wasted on this. Instead of reading the link above properly, 
+    I thought I knew better and just wrote 'Math.floor(Math.random(0,2))' and catching an error when 
+    my code did not select enough songs.
+*/

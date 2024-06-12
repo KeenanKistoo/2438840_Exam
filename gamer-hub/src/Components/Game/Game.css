@@ -115,3 +115,8 @@
     font-family: "Pixelify Sans", sans-serif;
 }
 
+.ans-btn:hover{
+    background-color: #e7e73b82;
+    cursor: pointer;
+}
+
