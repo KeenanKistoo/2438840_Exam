@@ -4,6 +4,7 @@ import FullHeart from '../../Images/ArtSect/heart_full.png';
 import EmptyHeart from '../../Images/ArtSect/heart_empty.png';
 import '../Game/Game.css';
 import AudioData from '../../Data/Audio';
+import YellowButton from '../../Images/ArtSect/yellow_btn.png'
 
 function Game() {
     // Current state of the game
@@ -29,7 +30,6 @@ function Game() {
 
     let audioTest = new Audio(currentSong);
 
-    audioTest.play();
 
     function startTimer(){
         SetTimer(timer - 1);
@@ -57,6 +57,12 @@ function Game() {
             </section>
             <section className="icon-sect">
                 <p className={play ? "icon-pause" : "icons"}>{play ? '▐▐ ' : '▶ '}</p>
+            </section>
+            <section className="answer-sect">
+                <button className="ans-btn">Answer 1</button>
+                <button className="ans-btn">Answer 2</button>
+                <button className="ans-btn">Answer 3</button>
+                <button className="ans-btn">Answer 4</button>
             </section>
         </section>
     );

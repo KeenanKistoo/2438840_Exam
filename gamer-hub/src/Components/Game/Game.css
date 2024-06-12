@@ -94,3 +94,24 @@
     font-family: "Pixelify Sans", sans-serif;
     font-size: 1.1rem;
 }
+
+.answer-sect{
+    position: absolute;
+    top: 82%; 
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    gap: 4px;
+    width: 25rem; 
+    height: 6rem;
+}
+
+.ans-btn{
+    height: 2rem;
+    border-radius: 5rem;
+    background-color: #c6c62d;
+    font-family: "Pixelify Sans", sans-serif;
+}
+
