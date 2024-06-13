@@ -20,6 +20,17 @@
     justify-content: space-between;
     width: 5rem; 
 }
+.life-info-sect {
+    position: absolute;
+    top: 47%; 
+    left: 45%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 5rem; 
+    font-family: "Pixelify Sans", sans-serif;
+    color: red;
+}
 
 .heart {
     width: 1.5rem;
@@ -28,12 +39,23 @@
 .score-sect{
     position: absolute;
     top: 44%; 
-    left: 56%;
+    left: 57.5%;
     transform: translateX(-50%);
     display: flex;
     justify-content: space-between;
     width: 5rem; 
     color: white;
+    font-family: "Pixelify Sans", sans-serif;
+}
+.score-info-sect{
+    position: absolute;
+    top: 46%; 
+    left: 57.5%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 5rem; 
+    color: rgb(0, 255, 0);
     font-family: "Pixelify Sans", sans-serif;
 }
 
@@ -82,6 +104,11 @@
     color: white;
     font-size: 1.4rem;
 }
+
+button:disabled{
+    color: black;
+}
+
 
 .timer-sect{
     position: absolute;
@@ -132,3 +159,14 @@
     cursor: pointer;
 }
 
+.hide{
+    opacity: 0;
+    visibility: hidden;
+}
+.correct{
+    background-color: rgb(0, 255, 0);
+}
+
+.incorrect{
+    background-color: rgb(243, 88, 88);
+}
