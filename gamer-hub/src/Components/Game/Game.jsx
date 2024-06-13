@@ -5,6 +5,8 @@ import EmptyHeart from '../../Images/ArtSect/heart_empty.png';
 import '../Game/Game.css';
 import AudioData from '../../Data/Audio';
 import RandomSongNames from '../../Data/RandomSongNames';
+import Correct from '../../Audio/correct.mp3'
+import Incorrect from '../../Audio/incorrect.mp3'
 
 
 function Game() {
@@ -146,14 +148,26 @@ function Game() {
         console.log(gameState);
     }
 
+
+    //score state
+    const [earn, setEarn] = useState(false);
+    const [loss, setLoss] = useState(false);
     function assignScore(selectedAnswer){
         setBtnsActive(false);
         setGameState('score');
         setUserAns(true);
+        let corrAudio = new Audio(Correct)
+        let incorrAudio = new Audio(Incorrect)
         if(answer.answer === selectedAnswer){
+            setEarn(true);
             SetScore(prev => prev + 300)
+            corrAudio.play();
+            setComm('CORRECT!!')
         }else if(answer.answer!== selectedAnswer){
+            setLoss(true);
             setLives(prev => prev - 1)
+            incorrAudio.play();
+            setComm(answer.answer)
         }
     }
     //https://www.youtube.com/watch?v=4_9yJXO4F2Y
@@ -201,6 +215,8 @@ function Game() {
             setNextState('ready');
         }else if(gameState === 'ready'){
             setComm('Ready?')
+            setEarn(false);
+            setLoss(false);
             setCountdown(3);
             if(!buttonDist){
                 setButtonAnswers();
@@ -208,6 +224,7 @@ function Game() {
             setNewWidth(100);
             setNextState('listen');
             setUserAns(false)
+            
         }else if(gameState === 'listen'){
             setComm('...')
             setCountdown(9);
@@ -242,11 +259,11 @@ function Game() {
             <section className="icon-sect">
                 <p className="warn">{comm}</p>
             </section>
-            <section className="timer-sect">
-                <p className="time-txt" ref={timerId}>00:0{countdown}</p>
+            <section className={`prog-sect  ${gameState === 'listen' ? '' : 'hidden'}`}>
+                <div className={`prog-bar`} style={{width: `${newWidth}%`}}>.</div>
             </section>
-            <section className="prog-sect">
-                <div className="prog-bar" style={{width: `${newWidth}%`, transition: '0.5s ease-out linear'}}>.</div>
+            <section className={`timer-sect `}>
+                <p className="time-txt" ref={timerId}>{gameState === score ? '' : `00:0${countdown}`}</p>
             </section>
             <section className={`answer-sect ${gameState === 'answer' || gameState === 'score' ? '' : 'hidden'}`}>
                 <button ref={button1} onClick={() => assignScore(answer1)} className= {`ans-btn ${gameState === 'score'&& answer.answer === answer1 ? 'correct': 'incorrect'}`} disabled={btnsActive ? false : true}>{answer1}</button>
@@ -260,10 +277,10 @@ function Game() {
                 <button onClick={() => playSong()}>Test</button>
             </section>
             <section className="score-info-sect">
-                <p className="score">+300</p>
+                <p className={`score ${earn ? '' : 'hidden'}`}>+300</p>
             </section>
             <section className="life-info-sect">
-                <p className="score">-1</p>
+                <p className={`score ${loss ? '' : 'hidden'}`}>-1</p>
             </section>
         </section>
     );
