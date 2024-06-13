@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Arcade from '../../Images/ArtSect/arcade_screen.png';
 import FullHeart from '../../Images/ArtSect/heart_full.png';
 import EmptyHeart from '../../Images/ArtSect/heart_empty.png';
@@ -29,6 +29,12 @@ function Game() {
     //Question Tracker
     const [tracker, setTracker] = useState(0);
 
+    //Answer For Round
+    const [answer, setAnswer] = useState("");
+
+    //Button refernces:
+    let button1 = useRef();
+
 
     function handleTimer(){
         if(timer > 0){
@@ -38,46 +44,73 @@ function Game() {
 
     //let timerInt = setInterval(handleTimer, 1000);
 
-    //Random Selection of 5 Songs
+    //Random Selection of 5 Songs ***Add this function to the start button.
     function genSongs(){
-        let availNumbers = [0,1,2,3,4,5,6,7]
-        let tracker = 5;
-        let copyArray = [...songs];
+        let availNumbers = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19] //Random Number Array Set ***Does not need to be reset
+        let TrackerNum = 7 //Max Question Count
+        let copyArray = [...songs]; //Songs array copy due to mutability... I think that's a word... PS: its 01:58... I'm tired
+        let trackerUpdate = 0; //Secondary counter
 
-        while(tracker > 0){
+        //Set all selected properties to false. Allows the game to be restarted without refreshing the page.
+        for(let i = 0; i < copyArray.length; i++){
+            copyArray[i].selected = false;
+        }
+
+        //Assigns 7 Random Songs
+        while(TrackerNum > 0){
             let ranNum = Math.floor(Math.random () * availNumbers.length)
-            availNumbers.splice(ranNum, 1);
-            tracker--;
-        }     
+            copyArray[ranNum].selected = true; //Sets selected song for future usage
+            availNumbers.splice(ranNum, 1); //Remove Option From Array
+            TrackerNum--;   //Decrements the tracker by 1 to ensure the correct number of questions are available.
+                            /* ***Bug 1: Even though this check happens, I sometimes get 1/2 questions less on some occassions */
+        }
 
-        for(let i=0; i < copyArray.length; i++){
-            if(i === availNumbers[0] || i === availNumbers[1] || i === availNumbers[2]){
-                copyArray[i].selected = false
-            }else{
-                copyArray[i].selected = true;
+        //Double check the number of questions. 
+        /*  Improvise For Bug 1: Instead of spending time trying to figure out why there is one less questions 2/10 times,
+            I created a tracker so that the game can still start if there is not exactly 7 questions. For example, if there
+            are only 6 items with selected == true, the game will only ask 6 questions instead of 7. 
+        */
+        for(let i = 0; i < copyArray.length; i++){
+            if(copyArray[i].selected){
+                trackerUpdate++;
             }
         }
-        setSongs(copyArray);
-        //console.log(songs);
+
+        //console.log(copyArray);
+        setTracker(trackerUpdate); //Update Number of Questions
+        setSongs(copyArray); //Update Song List 
+        //console.log(tracker);
 }
 
-    function playSongs(){
+    function setButtonAnswers(){
         let copyArray = [...songs]
-        let TestAudio = new Audio(copyArray[tracker].audio)
+        let answer = [];
+        console.log("Working")
 
-        TestAudio.play();
-    }
-    //***NOTE:comment out this hook
-    useEffect(() => {
-        genSongs();
-        //playSongs();
-
-        if(timer > 0){
-            setNewWidth(timer * 10);
-        }else {
-            console.log("Interval Cleared")
+        for(let i = 0; i < copyArray.length; i++){
+            if(copyArray[i].selected && !copyArray[i].used){
+                answer = copyArray[i];
+                console.log("Answer Caught")
+                break;
+            }
         }
-    },[timer]); // This line is for testing purposes. The function needs to be called on button click. NOTE:comment out this hook
+        console.log(button1)
+
+        
+    }
+
+    //***NOTE:comment out this hook
+    /* useEffect(() => {
+         genSongs();
+         //playSongs();
+        
+
+         if(timer > 0){
+             setNewWidth(timer * 10);
+         }else {
+             console.log("Interval Cleared")
+         }
+     },[]);*/ // This line is for testing purposes. The function needs to be called on button click. NOTE:comment out this hook
 
     
     return (
@@ -101,10 +134,14 @@ function Game() {
                 <p className={play ? "icon-pause" : "icons"}>{play ? '▐▐ ' : '▶ '}</p>
             </section>
             <section className="answer-sect">
-                <button className="ans-btn">Colours 1</button>
+                <button ref={button1}className="ans-btn">Colours 1</button>
                 <button className="ans-btn">Answer 2</button>
                 <button className="ans-btn">Answer 3</button>
                 <button className="ans-btn">Answer 4</button>
+            </section>
+            <section>
+                <button onClick={() => genSongs()}>Test</button>
+                <button onClick={() => setButtonAnswers()}>Test</button>
             </section>
         </section>
     );
@@ -115,11 +152,13 @@ export default Game;
 
 /*  STEPS TO CREATE GAME:
 
-    1) Randomise song list to get 7 songs.
-        - Save song list is state[]
+    1) Randomise song list to get 7 songs. **Complete
+        - Save song list is state[] -> Did not do it in this way. Added selected bool. set the bool to true.
+                                    -> Also have a bool if it has already been played.
     
     2) Randomise button answers
         - Assign 1 correct answer + 3 incorrect answers
+        - useRef?
     
     3) Countdown for song
         - Give user 3 second warning
