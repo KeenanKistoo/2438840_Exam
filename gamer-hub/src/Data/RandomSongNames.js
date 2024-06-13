@@ -32,5 +32,7 @@ const RandomSongNames = [
     'Alive',
     'Walk',
     '16 Years',
-    
+
 ]
+
+export default RandomSongNames;

@@ -39,7 +39,7 @@
 
 .prog-sect{
     position: absolute;
-    top: 53%; 
+    top: 58%; 
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -85,14 +85,26 @@
 
 .timer-sect{
     position: absolute;
-    top: 48%; 
+    top: 50%; 
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     justify-content: space-between;
     color: white;
     font-family: "Pixelify Sans", sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.8rem;
+}
+
+.icon-sect{
+    position: absolute;
+    top: 45%; 
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 1.8rem;
 }
 
 .answer-sect{

@@ -4,6 +4,7 @@ import FullHeart from '../../Images/ArtSect/heart_full.png';
 import EmptyHeart from '../../Images/ArtSect/heart_empty.png';
 import '../Game/Game.css';
 import AudioData from '../../Data/Audio';
+import RandomSongNames from '../../Data/RandomSongNames';
 
 
 function Game() {
@@ -12,7 +13,7 @@ function Game() {
     const [lives, setLives] = useState(3);
 
     //Timer Counte
-    const [timer, setTimer] = useState(9);
+    const [timer, setTimer] = useState(3);
 
     //Score Count
     const [score, SetScore] = useState(0)
@@ -30,17 +31,25 @@ function Game() {
     const [tracker, setTracker] = useState(0);
 
     //Answer For Round
-    const [answer, setAnswer] = useState("");
+    const [answer, setAnswer] = useState();
 
     //Button refernces:
     let button1 = useRef();
+    let button2 = useRef();
+    let button3 = useRef();
+    let button4 = useRef();
 
+    //Answer PlaceHolders
+    const [answer1, setAnswer1] = useState('');
+    const [answer2, setAnswer2] = useState('');
+    const [answer3, setAnswer3] = useState('');
+    const [answer4, setAnswer4] = useState('');
 
-    function handleTimer(){
-        if(timer > 0){
-        setTimer(timer - 1);
-    }
-    }
+    //Random songs
+    const [randomSongs, setRandomSongs] = useState(RandomSongNames);
+
+    //Ans. Btn State
+    const [btnsActive, setBtnsActive] = useState(false);
 
     //let timerInt = setInterval(handleTimer, 1000);
 
@@ -53,6 +62,7 @@ function Game() {
 
         //Set all selected properties to false. Allows the game to be restarted without refreshing the page.
         for(let i = 0; i < copyArray.length; i++){
+            copyArray[i].selected = false;
             copyArray[i].selected = false;
         }
 
@@ -83,35 +93,66 @@ function Game() {
 }
 
     function setButtonAnswers(){
-        let copyArray = [...songs]
-        let answer = [];
-        console.log("Working")
+        let copyArray = [...songs] //Copy of Audio.js
+        let answer = []; //Empty Array to store the answer
+        let answerBtns = [setAnswer1, setAnswer2, setAnswer3, setAnswer4] //Create an array for button states
+        //console.log("Working")
+        let copyRanSongs = [...randomSongs] //Copy of random songs
 
         for(let i = 0; i < copyArray.length; i++){
             if(copyArray[i].selected && !copyArray[i].used){
                 answer = copyArray[i];
+                copyArray[i].used = true; //Set used to true to avoid reusing the same answer
                 console.log("Answer Caught")
+                setAnswer(answer); //Set the answer for correct/incorrect check
                 break;
             }
         }
-        console.log(button1)
-
         
+        let ranIndex = Math.floor(Math.random() * 4) //Select a random btn to store answer
+
+        answerBtns[ranIndex](answer.answer); //Display answer
+        answerBtns.splice(ranIndex, 1); //Remove answerBtn to avoid reiterating over the same btn
+        //console.log(answerBtns)
+
+        for(let j = 0; j < answerBtns.length; j++){
+            let ranName = Math.floor(Math.random() * copyRanSongs.length) //Select a random name from the list of fifa song names
+            answerBtns[j](copyRanSongs[ranName]); //Assign the song to the state
+            copyRanSongs.splice(ranName, 1);    //This line is supposed to ensure no duplication per a question but, it is not working.
+                                                //***Fixed: I was splicing using j instead of the index
+            //console.log(copyRanSongs);
+        }
+
+        setBtnsActive(true);
     }
 
+    function playSong(){
+        let aud = new Audio(answer.audio)
+        aud.play()
+    }
+    //https://www.youtube.com/watch?v=4_9yJXO4F2Y
+    const [countdown, setCountdown] = useState(9)
+    const timerId = useRef();
+    const [stateCheck , setStateCheck] = useState(false);
     //***NOTE:comment out this hook
-    /* useEffect(() => {
-         genSongs();
-         //playSongs();
-        
+    useEffect(() => {
+        timerId.current = setInterval(() => {
+            if(countdown > 0){
+            setCountdown(prev => prev - 1)
+            if(stateCheck){
+            setNewWidth(prev => prev - 11)
+            }
+            }
+        }, 1000)
+        return () => clearInterval(timerId.current)
+     },[]); // This line is for testing purposes. The function needs to be called on button click. NOTE:comment out this hook
 
-         if(timer > 0){
-             setNewWidth(timer * 10);
-         }else {
-             console.log("Interval Cleared")
-         }
-     },[]);*/ // This line is for testing purposes. The function needs to be called on button click. NOTE:comment out this hook
-
+     useEffect(() =>{
+        if(countdown <= 0){
+            clearInterval(timerId.current);
+            alert("END")
+        }
+     }, [countdown])
     
     return (
         <section className='arcade-screen'>
@@ -124,24 +165,25 @@ function Game() {
             <section className="score-sect">
                 <p className="score">{score}</p>
             </section>
+            <section className="icon-sect">
+                <p className="warn">Test</p>
+            </section>
             <section className="timer-sect">
-                <p className="time-txt">00:0{timer}</p>
+                <p className="time-txt" ref={timerId}>00:0{countdown}</p>
             </section>
             <section className="prog-sect">
                 <div className="prog-bar" style={{width: `${newWidth}%`, transition: '0.5s ease-out linear'}}>.</div>
             </section>
-            <section className="icon-sect">
-                <p className={play ? "icon-pause" : "icons"}>{play ? '▐▐ ' : '▶ '}</p>
-            </section>
             <section className="answer-sect">
-                <button ref={button1}className="ans-btn">Colours 1</button>
-                <button className="ans-btn">Answer 2</button>
-                <button className="ans-btn">Answer 3</button>
-                <button className="ans-btn">Answer 4</button>
+                <button ref={button1} className="ans-btn" disabled={btnsActive ? false : true}>{answer1}</button>
+                <button ref={button2} className="ans-btn" disabled={btnsActive ? false : true}>{answer2}</button>
+                <button ref={button3} className="ans-btn" disabled={btnsActive ? false : true}>{answer3}</button>
+                <button ref={button4} className="ans-btn" disabled={btnsActive ? false : true}>{answer4}</button>
             </section>
             <section>
                 <button onClick={() => genSongs()}>Test</button>
                 <button onClick={() => setButtonAnswers()}>Test</button>
+                <button onClick={() => playSong()}>Test</button>
             </section>
         </section>
     );
@@ -196,4 +238,10 @@ export default Game;
     It was actually shocking how much time I wasted on this. Instead of reading the link above properly, 
     I thought I knew better and just wrote 'Math.floor(Math.random(0,2))' and catching an error when 
     my code did not select enough songs.
-*/
+
+    Random Button Answers (setButtonAnswers Function):
+    https://www.shecodes.io/athena/3909-removing-an-item-from-an-array-in-javascript#:~:text=You%20can%20remove%20an%20item,be%20removed%20from%20the%20array.&text=var%20arr%20%3D%20%5B%22apple%22,splice(1%2C1)%3B
+    There several checks that needed to take place in this function. 
+
+
+    */
