@@ -8,6 +8,7 @@
     display: block;
     width: 100%;
     height: auto;
+    margin-top: -2rem;
 }
 
 /* https://www.shecodes.io/athena/7710-how-to-position-a-fixed-element-in-the-top-right-corner#:~:text=in%203.93%20seconds-,To%20position%20a%20fixed%20element%20in%20the%20top%20right%20corner,properties%20to%20adjust%20its%20position.&text=In%20this%20example%2C%20we've,of%20%22fixed%2Delement%22. */
