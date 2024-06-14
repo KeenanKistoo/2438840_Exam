@@ -246,7 +246,7 @@ function Game() {
             setUserAns(false)
             
         }else if(gameState === 'listen'){
-            setComm('...')
+            setComm('Guess..')
             setCountdown(9);
             setNewWidth(100);
             setNextState('answer')
