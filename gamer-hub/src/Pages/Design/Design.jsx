@@ -6,6 +6,7 @@ import ImageComp from '../../Components/ImageComp/Image';
 import DesignInfo from '../../Data/Design'
 import Link from '../../Components/Link/Link';
 import ColourComb from '../../Components/ColourComb/ColourComb';
+import Scroll from '../../Components/Scroll/Scroll';
 
  function Design()  {
 
@@ -26,6 +27,7 @@ import ColourComb from '../../Components/ColourComb/ColourComb';
                 return <ColourComb/>
               }
            })}
+           <Scroll/>
       </main>
     )
   }

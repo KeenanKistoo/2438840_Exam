@@ -9,6 +9,7 @@ import Text from '../../Components/Text/Text'
 import ImageComp from '../../Components/ImageComp/Image'
 import Link from '../../Components/Link/Link'
 import Reference from '../../Components/Reference/Reference'
+import Scroll from '../../Components/Scroll/Scroll'
 
  function Theory()  {
 
@@ -43,6 +44,7 @@ import Reference from '../../Components/Reference/Reference'
             })
           }
         </section>
+        <Scroll/>
       </main>
     )
   }

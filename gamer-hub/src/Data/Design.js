@@ -230,7 +230,7 @@ const DesignInfo = [
     },
     {
         type: 'text',
-        info: "Where I felt I lacked is in communication, and display. Sometimes, information is not always displayed clearly but I tried my best to emphasise everything as much as possible. The code itself was very bloated however, I do not see how I would break this up better. If there are ways to do this, I need to explore more of it and try to be a bit clearer. Another issue is my naming conventions. I need to be a bit more descriptive as coming back to work a day or two later, makes it difficult to recall. I do think I did a better job on this this time though."
+        info: "Where I felt I lacked is in communication, and display. Sometimes, information is not always displayed clearly but I tried my best to emphasise everything as much as possible. The code itself was very bloated however, I do not see how I would break this up better. If there are ways to do this, I need to explore more of it and try to be a bit clearer. Another issue is my naming conventions. I need to be a bit more descriptive as coming back to work a day or two later, makes it difficult to recall. I do think I did a better job on this this time though.    "
     },
     {
         type: 'head',
