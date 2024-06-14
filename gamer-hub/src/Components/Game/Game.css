@@ -89,24 +89,16 @@
 
 .icon-sect{
     position: absolute;
-    top: 55%; 
-    left: 51.5%;
+    top: 50%; 
+    left: 53%;
     transform: translateX(-50%);
     display: flex;
     justify-content: space-between;
-    width: 5rem; 
+    width: 10rem; 
 }
 
-.icons{
-    position: relative  ;
-    color: white;
-    font-size: 1.5rem;
-    padding-left: 0.6rem;
-    padding-right: 0.5rem;
-    border-radius: 100%;
-    left: 5%;
-    border: 1px solid white;
-
+.warn{
+    font-size: 1.1rem;
 }
 
 .icon-pause{
@@ -179,3 +171,34 @@ button:disabled{
 .incorrect{
     background-color: rgb(243, 88, 88);
 }
+
+.start-sect{
+    position: absolute;
+    top: 44.5%; 
+    left: 49.8%;
+    transform: translateX(-50%);
+}
+.restart-sect{
+    position: absolute;
+    top: 79.5%; 
+    left: 49.8%;
+    transform: translateX(-50%);
+}
+
+.start-btn{
+    height: 11rem;
+    width:  15rem;
+    background-color: #494949;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 3rem;
+    color: white;
+}
+.restart-btn{
+    height: 5rem;
+    width:  15rem;
+    background-color: #494949;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 3rem;
+    color: white;
+}
+

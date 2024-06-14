@@ -62,6 +62,11 @@ function Game() {
     //Detect Btn Answers
     const [buttonDist, setButtonDist] = useState(false);
 
+    //Start Button
+    const [disableStart, setDisableStart] = useState(false);
+    //Restart Button
+    const [disableRestart, setDisableRestart] = useState(false);
+
     //Random Selection of 5 Songs ***Add this function to the start button.
     function genSongs(){
         let availNumbers = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19] //Random Number Array Set ***Does not need to be reset
@@ -146,14 +151,20 @@ function Game() {
     function startLoad(){
         setGameState('load')
         console.log(gameState);
+        setDisableStart(true)
+        setDisableRestart(false)
     }
 
 
     //score state
     const [earn, setEarn] = useState(false);
     const [loss, setLoss] = useState(false);
+
+    //All questions asked
+    const [questionsAsked, setQuestionsAsked] = useState(0);
     function assignScore(selectedAnswer){
         setBtnsActive(false);
+        setQuestionsAsked(prev => prev + 1);
         setGameState('score');
         setUserAns(true);
         let corrAudio = new Audio(Correct)
@@ -166,8 +177,16 @@ function Game() {
         }else if(answer.answer!== selectedAnswer){
             setLoss(true);
             setLives(prev => prev - 1)
+            console.log(lives);
+            if(lives < 2){
+                setGameState('end');
+            }
             incorrAudio.play();
             setComm(answer.answer)
+        }
+
+        if(questionsAsked > 6){
+            setGameState('end');
         }
     }
     //https://www.youtube.com/watch?v=4_9yJXO4F2Y
@@ -204,6 +223,7 @@ function Game() {
         if(gameState === 'wait'){
             setCountdown(5);
             setNewWidth(100);
+            setQuestionsAsked(0);
             //console.log("Waiting For Player")
         }else if(gameState === 'load'){
             setComm('Loading...')
@@ -242,8 +262,16 @@ function Game() {
                 assignScore('no answer');
             }
             setNextState('ready')
+        }else if(gameState === 'end'){
+            if(lives <=1){
+                setComm('Nice Try!')
+                setDisableRestart(true)
+            }else{
+                setComm('Well Done!')
+            }
+            clearInterval(timerId.current)
         }
-     }, [gameState,userAns])
+     }, [gameState,userAns,lives])
     
     return (
         <section className='arcade-screen'>
@@ -256,7 +284,7 @@ function Game() {
             <section className="score-sect">
                 <p className="score">{score}</p>
             </section>
-            <section className="icon-sect">
+            <section className="icon-sect" style={{top: '50%', left: '53%'}}>
                 <p className="warn">{comm}</p>
             </section>
             <section className={`prog-sect  ${gameState === 'listen' ? '' : 'hidden'}`}>
@@ -266,21 +294,23 @@ function Game() {
                 <p className="time-txt" ref={timerId}>{gameState === score ? '' : `00:0${countdown}`}</p>
             </section>
             <section className={`answer-sect ${gameState === 'answer' || gameState === 'score' ? '' : 'hidden'}`}>
-                <button ref={button1} onClick={() => assignScore(answer1)} className= {`ans-btn ${gameState === 'score'&& answer.answer === answer1 ? 'correct': 'incorrect'}`} disabled={btnsActive ? false : true}>{answer1}</button>
-                <button ref={button2} onClick={() => assignScore(answer2)} className= {`ans-btn ${gameState === 'score' && answer.answer === answer2 ? 'correct': 'incorrect'}`} disabled={btnsActive ? false : true}>{answer2}</button>
-                <button ref={button3} onClick={() => assignScore(answer3)} className= {`ans-btn ${gameState === 'score' && answer.answer === answer2 ? 'correct': 'incorrect'}`} disabled={btnsActive ? false : true}>{answer3}</button>
-                <button ref={button4} onClick={() => assignScore(answer4)} className= {`ans-btn ${gameState === 'score' && answer.answer === answer2 ? 'correct': 'incorrect'}`} disabled={btnsActive ? false : true}>{answer4}</button>
+                <button ref={button1} onClick={() => assignScore(answer1)} className= 'ans-btn' disabled={btnsActive ? false : true}>{answer1}</button>
+                <button ref={button2} onClick={() => assignScore(answer2)} className='ans-btn' disabled={btnsActive ? false : true}>{answer2}</button>
+                <button ref={button3} onClick={() => assignScore(answer3)} className= 'ans-btn' disabled={btnsActive ? false : true}>{answer3}</button>
+                <button ref={button4} onClick={() => assignScore(answer4)} className= 'ans-btn' disabled={btnsActive ? false : true}>{answer4}</button>
             </section>
-            <section>
-                <button onClick={() => startLoad()}>Test</button>
-                <button onClick={() => setButtonAnswers()}>Test</button>
-                <button onClick={() => playSong()}>Test</button>
-            </section>
+            
             <section className="score-info-sect">
                 <p className={`score ${earn ? '' : 'hidden'}`}>+300</p>
             </section>
             <section className="life-info-sect">
                 <p className={`score ${loss ? '' : 'hidden'}`}>-1</p>
+            </section>
+            <section className={`start-sect ${disableStart ? 'hidden' : ''}`}>
+                <button onClick={() => startLoad()} className="start-btn">START</button>
+            </section>
+            <section className={`restart-sect ${disableRestart ? '' : 'hidden'}`}>
+                <button onClick={() => startLoad()} className="restart-btn">Restart</button>
             </section>
         </section>
     );
