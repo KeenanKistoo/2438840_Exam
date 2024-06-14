@@ -7,6 +7,7 @@ import HomeWire from '../Images/wire/homewire.png'
 import HomeWire2 from '../Images/wire/homewire2.png'
 import Explore from '../Images/wire/explorewire.png'
 import Explore2 from '../Images/wire/explorewire2.png'
+import GameWire from '../Images/wire/gamewire.png'
 const DesignInfo = [
     {
         type:'head',
@@ -169,7 +170,71 @@ const DesignInfo = [
     },
     {
         type: 'head',
-        info: 'Overall Reflection:'
+        info: 'Art Section:'
+    },
+    {
+        type: 'text',
+        info: 'I have decided to create a game that plays on nostalgia, and recall, specifically for FIFA players. This is the first instalment of what I hope to continue creating for other popular games. '
+    },
+    {
+        type: 'text',
+        info: 'I decided to give this game an arcade-like feel, by illustrating the game as an arcade machine. '
+    },
+    {
+        type: 'image',
+        info: GameWire
+    },
+    {
+        type: 'text',
+        info: "The game is a simple guess the song quiz. The songs are based on random FIFA games from 2002 to 2021. You have three lives, and for every song you guess correctly, you get 300 points. "
+    },
+    {
+        type: 'text',
+        info: "Communication: Every time you lose a life, or answer a question correctly, there are three different methods of communication. Firstly, there is audio communication, a ‘ding’ correct sound effect and a buzzer incorrect sound effect. Then, there is a text that appears under the life count or scoreboard respectively, that indicates the decrease or increase. Furthermore, the red heart, changes to a grey one to remind the user of their life count. And finally, communication text displays all game information, if a song is correct, it says so, if the song is incorrect, it names the correct song. "
+    },
+    {
+        type: 'text',
+        info: "Replayability: This also has two versions. If a player wins, or loses the game, they can restart it without refreshing the page. I know that refreshing single page applications with gh-pages often leads to 404 errors, so I am trying to avoid it at all costs. On the other hand, the game has over 20 songs but only 6 is selected at a time. This means that the user can play the game more than once."
+    },
+    {
+        type: 'text',
+        info: "Process: I simplified this as much as possible. I used 5 states that loop continuously until the player wins/loses the game. After hours of contemplation, I felt that this was the best way for me to achieve a game without requiring the player to click multiple buttons to control the game. With this method, the player should not click their mouse more than the number of questions asked + 1 start click. "
+    },
+    {
+        type: 'text',
+        info: "Scoreboard: There is no live count of high scores or anything. So, why a scoreboard? I feel that when playing a game, a person needs to feel a sense of reward when doing something good, especially, if they are punished for doing something wrong. It becomes this competition between player and game, as well as player and themselves. A nice edition to this game, would have been a score X timer equation. For example, the player has 5 seconds to guess the song, the faster they click, the more points they get. "
+    },
+    {
+        type: 'text',
+        info: "Coding Challenges: The biggest challenge I faced was managing the excessive number of states that I used. Honestly, there may have been easier ways to achieve certain state changes, however, I was trying to make sure that elements were not lost. For example, buttonDist (implies, Button Distribution) is a state added to my game a lot later. It was done for the sole purpose of stopping the loop when a value is changed. An issue I faced, was that the loop would occur twice, and the game skipped multiple songs, then repeated the final song. This state change helped mitigate the issue. This was the thought process of a lot of the states in the game. "
+    },
+    {
+        type: 'text',
+        info: "I quickly came to realise that React.js is not three.js, Unity C# or, Unreal C++. Certain functions like Update() and callouts do not exist in the same form. For example, an Update function in Unity renders continuously, and can be switched on and off by a bool or Enum switch statement. Here, once an interval is stopped, it needs to be declared again. I researched and found setTimeouts() and other built-in react functions similar but, each one had the same comment: may not work for a game. The useEffect hook made a lot of this easier as its dependency change check allowed me to reset values without terminating anything. "
+    },
+    {
+        type: 'text',
+        info: "I have declared the setInterval() function my sworn enemy. I spent over five and a half hours trying to figure out how to render the outputs without it bouncing and glitching on my screen. Eventually, I found a four-minute video that separated the useEffect hooks instead of using a singular hook for both functions. I have never struggled with something this much before and be completely stuck. "
+    },
+    {
+        type: 'text',
+        info: "Process: My process to create this game was similar to our eCommerce lecture demonstration. I started off determining every variable that I may need and writing them down. Normally, we would simply write down the function using ‘//’ and proceed to write the code. After initially doing this, I failed quickly as there were dual outcomes for many of my events. For example, an incorrect or correct answer by the user, or a selected and unselected song. I then decided to write the comments outside of my component, stating its core process, outcomes and outcome events. This made the process significantly easier as I already knew what I intended to happen next. "
+    },
+    {
+        type: 'text',
+        info: "Each function was built and tested independently. At the bottom of my page, I had 3 random test buttons that I used to check if everything was working. Once everything worked, I then broke my game up into six game states: wait, load, ready, listen, answer, score, end. The wait state is the idle state when the player is just active on the art page. The load state was added for DOM content purposes. I am viewing and testing my app on a localhost. This implies that no internet connection is required, and most functions were carried instantaneously. However, this may not be the case when users interact with the site on gh-pages. I just wanted to ensure the songs array loaded and properties were set beforehand. Ready, simply gives the player a few seconds to prepare. Listen, answer, score, and end are all self-explanatory."
+    },
+    {
+        type: 'text',
+        info: "Also, I am not aware of whether this aligns with conventional coding practices in React but, after struggling to scroll up and down to recall states, I decided to add the countdown states above the function. This was significantly easier to manage and broke everything down so much better. While reading through stack overflow during my setInterval crisis, this was one the comments made. It will be something that I research in terms of cons and convention, and if both allow for it, it will be something that I practice in the future. "
+    },
+    {
+        type: 'text',
+        info: "Where I felt I lacked is in communication, and display. Sometimes, information is not always displayed clearly but I tried my best to emphasise everything as much as possible. The code itself was very bloated however, I do not see how I would break this up better. If there are ways to do this, I need to explore more of it and try to be a bit clearer. Another issue is my naming conventions. I need to be a bit more descriptive as coming back to work a day or two later, makes it difficult to recall. I do think I did a better job on this this time though."
+    },
+    {
+        type: 'head',
+        info: 'Final Reflection:'
     },
     {
         type: 'text',

@@ -152,6 +152,7 @@ button:disabled{
     height: 2rem;
     border-radius: 5rem;
     background-color: #c6c62d;
+    font-size: 1.3rem;
     font-family: "Pixelify Sans", sans-serif;
 }
 
@@ -192,7 +193,15 @@ button:disabled{
     font-family: "Pixelify Sans", sans-serif;
     font-size: 3rem;
     color: white;
+    
 }
+
+.start-btn:hover{
+    transition: 0.8s ease-out linear;
+    background-color: #918d8d;
+    cursor: pointer;
+}
+
 .restart-btn{
     height: 5rem;
     width:  15rem;
@@ -202,3 +211,8 @@ button:disabled{
     color: white;
 }
 
+.restart-btn:hover{
+    transition: 0.8s ease-out linear;
+    background-color: #918d8d;
+    cursor: pointer;
+}

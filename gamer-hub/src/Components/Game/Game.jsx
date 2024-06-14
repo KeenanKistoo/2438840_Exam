@@ -210,14 +210,14 @@ function Game() {
             
         }, 1000)
     }
-    //***NOTE:comment out this hook
+   
     useEffect(() => {
         if(startInterval){
             timerHandler();
         }   
     return () => clearInterval(timerId.current)
     
-     },[startInterval, nextState]); // This line is for testing purposes. The function needs to be called on button click. NOTE:comment out this hook
+     },[startInterval, nextState]);
 
      useEffect(() =>{
         if(gameState === 'wait'){
@@ -227,7 +227,7 @@ function Game() {
             //console.log("Waiting For Player")
         }else if(gameState === 'load'){
             setComm('Loading...')
-            genSongs();
+            genSongs(); //Selects the 7 songs
             setCountdown(3);
             setStartInterval(true);
             SetScore(0);
@@ -239,7 +239,7 @@ function Game() {
             setLoss(false);
             setCountdown(3);
             if(!buttonDist){
-                setButtonAnswers();
+                setButtonAnswers(); //Distributes Answers
             }
             setNewWidth(100);
             setNextState('listen');
@@ -250,7 +250,7 @@ function Game() {
             setCountdown(9);
             setNewWidth(100);
             setNextState('answer')
-            playSong();
+            playSong(); //Plays song
         }else if(gameState === 'answer'){
             setCountdown(5)
             setNextState('score')
@@ -268,6 +268,7 @@ function Game() {
                 setDisableRestart(true)
             }else{
                 setComm('Well Done!')
+                setDisableRestart(true)
             }
             clearInterval(timerId.current)
         }
@@ -336,11 +337,20 @@ export default Game;
         - Every song is 9 seconds
 
     5) Answer Time
-        - IF user answers while song is playing, stop song and complete answer check
+        - IF user answers while song is playing, stop song and complete answer check -> When you stop an interval, you have to create a new one
+                                                                                        to start this process again. I was unable to manage this
+                                                                                        or find relevant code/inspo to manage this. I decided to
+                                                                                        just make the user listen to the entire song before revealing
+                                                                                        the answers. 
         - IF user does not answer, give 3 seconds after 
     
     6) Check answer
-        - Correct: Turn Button Green + Add Points to scoreboard
+        - Correct: Turn Button Green + Add Points to scoreboard ->  I was unable to turn the buttons green. I used a trenary check to see
+                                                                    the correct answer and it's btn reference but my assumption is that the
+                                                                    colour being store in a state is not being updated immediately. Instead
+                                                                    on the second click, it will update accordingly. Instead of turning the 
+                                                                    btns green/red, I decided to add a correct/incorrect ding sound effect
+                                                                    as well as a text showing 'correct' or the correct song name. 
         - Incorrect: Remove a life
 
     7)  Life Check
